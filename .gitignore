@@ -1,0 +1,94 @@
+# Build directories
+build/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.obj
+*.sln
+*.vcxproj
+*.filters
+*.user
+*.sdf
+*.opensdf
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+
+# Executable
+GraphicsProject
+
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Debug files
+*.dSYM/
+*.dSYM.zip
+*.dSYM/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Large binary files that should be in LFS or excluded
+*.exr
+*.hdr
+*.bin
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.bz2
+*.xz
+*.lzma
+*.lz4
+*.lzh
+*.zst
+*.zstd
+
+# Local development files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

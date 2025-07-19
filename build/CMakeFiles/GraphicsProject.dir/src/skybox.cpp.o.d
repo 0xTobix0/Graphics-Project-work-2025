@@ -1016,7 +1016,39 @@ CMakeFiles/GraphicsProject.dir/src/skybox.cpp.o: \
   /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../geometric.hpp \
   /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../trigonometric.hpp \
   /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../matrix.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/iostream \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/shader.h \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/type_ptr.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/quaternion.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../mat3x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../mat4x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../vec3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../vec4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../gtc/constants.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/quaternion.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../trigonometric.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../geometric.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../exponential.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat2x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat2x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat2x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat3x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat3x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat3x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat4x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat4x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/type_ptr.inl \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/fstream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/filesystem \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__chrono/file_clock.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/iomanip \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/ostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/bitset \
@@ -1070,4 +1102,14 @@ CMakeFiles/GraphicsProject.dir/src/skybox.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/formatter_tuple.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/unistd.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/u8path.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/sstream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/iostream \
   /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/stb_image.h

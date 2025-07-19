@@ -23,6 +23,11 @@ build/
 *.vcxproj.user
 *.suo
 
+# Large binary files
+*.rar
+*.zip
+*.7z
+
 # Executable
 GraphicsProject
 

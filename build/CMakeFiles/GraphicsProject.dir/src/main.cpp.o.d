@@ -1,6 +1,6 @@
 CMakeFiles/GraphicsProject.dir/src/main.cpp.o: \
   /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/main.cpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glad-3.3/include/glad/gl.h \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/../external/glad-3.3/include/glad/gl.h \
   /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glad-3.3/include/KHR/khrplatform.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/stdint.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__config \
@@ -39,101 +39,175 @@ CMakeFiles/GraphicsProject.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_max_align_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_offsetof.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/iostream \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/glm.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/_fixes.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cmath \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__assertion_handler \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__verbose_abort \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__availability \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/version \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/ios \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/ios.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/string.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/memory_resource.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__ios/fpos.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__locale \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/shared_ptr.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/compare_three_way.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/three_way_comparable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/common_comparison_category.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/ordering.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/enable_if.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_same.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_arithmetic.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/integral_constant.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cstddef \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_integral.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_floating_point.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_cv.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_const.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_volatile.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/common_reference_with.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/convertible_to.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_convertible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_array.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_function.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_const.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_reference.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_integral.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_constant_evaluated.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_same.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/promote.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/declval.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/limits \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_signed.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__undef_macros \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/version \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/type_traits \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/hash.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_const.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_cv.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_lvalue_reference.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_referenceable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_pointer.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_void.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_reference.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/declval.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/same_as.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cstddef \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_rvalue_reference.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_volatile.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/aligned_storage.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/conditional.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/nat.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/type_list.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/aligned_union.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/alignment_of.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/apply_cv.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_const.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_volatile.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/can_extract_key.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/pair.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_const_ref.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/common_reference.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/common_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/conditional.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/decay.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_pointer.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_referenceable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_array.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_function.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_reference.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_extent.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_cvref.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/void_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/copy_cv.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_const.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_cv.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_volatile.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/copy_cvref.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_lvalue_reference.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_rvalue_reference.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/equality_comparable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/boolean_testable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/forward.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/make_const_lvalue_ref.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/totally_ordered.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__exception/exception.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/binary_function.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/operations.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/unary_function.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/operation_traits.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/reference_wrapper.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/invoke.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_convertible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/conjunction.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/dependent_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/disjunction.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/extent.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/has_unique_object_representation.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_all_extents.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/has_virtual_destructor.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/invoke.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/apply_cv.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_volatile.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_base_of.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_core_convertible.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_member_function_pointer.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_member_object_pointer.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_reference_wrapper.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/nat.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/weak_result_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/addressof.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/ostream.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/access.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/allocation_guard.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/allocator_traits.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/construct_at.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/voidify.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/move.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_copy_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/forward.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_abstract.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_aggregate.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_assignable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_bounded_array.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_callable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivial.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_class.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_compound.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_fundamental.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_null_pointer.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__undef_macros \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/new \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/stdlib.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/stdlib.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_stdlib.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_copy_assignable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_copy_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_default_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_destructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_empty.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_enum.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_final.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_implicitly_default_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_literal_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_member_pointer.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_move_assignable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_move_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_convertible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/lazy.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_copy_assignable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_copy_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_default_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_destructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_scalar.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_pointer.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_assignable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_object.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_union.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_pod.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_polymorphic.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_scoped_enum.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/underlying_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_specialization.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_swappable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_assignable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_copy_assignable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_copy_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_copyable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cstdint \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_default_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_destructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_move_assignable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_move_constructible.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_unbounded_array.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_unsigned.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/make_const_lvalue_ref.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/make_signed.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/make_unsigned.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/maybe_const.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/negation.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/rank.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_pointer.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/result_of.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/invoke.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/type_identity.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/unwrap_ref.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/math.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/math.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/Availability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/AvailabilityVersions.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/AvailabilityInternal.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/AvailabilityInternalLegacy.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/abs.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/copysign.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/error_functions.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/exponential_functions.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/fdim.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/fma.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/gamma.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/hyperbolic_functions.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/hypot.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/inverse_hyperbolic_functions.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/inverse_trigonometric_functions.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/logarithms.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/min_max.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/modulo.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/remainder.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/roots.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/rounding_functions.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/traits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/trigonometric_functions.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/stdlib.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/stdlib.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_stdlib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/wait.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_pid_t.h \
@@ -179,91 +253,186 @@ CMakeFiles/GraphicsProject.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_abort.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_dev_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_mode_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/climits \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/machine/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/arm/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/arm/_limits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/syslimits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cfloat \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/float.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/float.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/float.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cassert \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/assert.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_assert.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_static_assert.h \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/fwd.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_int.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/setup.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_float.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/precision.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/vec2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec2.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/vec3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec3.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/vec4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec4.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat2x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../fwd.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x2.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat2x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x3.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat2x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x4.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat3x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x2.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat3x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x3.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat3x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x4.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat4x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x2.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat4x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x3.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat4x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x4.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/trigonometric.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_trigonometric.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_trigonometric.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/_vectorize.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec1.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec1.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/exponential.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_exponential.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_exponential.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_vector_relational.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_vector_relational.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/common.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_common.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_common.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/packing.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_packing.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_packing.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_half.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_half.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/geometric.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_geometric.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_geometric.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/matrix.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_matrix.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../detail/precision.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../detail/setup.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../detail/type_mat.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../vec2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../vec3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../vec4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat2x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat2x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat2x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat3x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat3x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat3x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat4x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat4x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat4x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_matrix.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../geometric.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/vector_relational.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/integer.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_integer.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_integer.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/matrix_transform.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat4x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../vec2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../vec3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../vec4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/constants.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../detail/setup.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/constants.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/matrix_transform.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../geometric.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../trigonometric.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../matrix.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/type_ptr.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/quaternion.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../mat3x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../mat4x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../vec3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../vec4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../gtc/constants.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/quaternion.inl \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../trigonometric.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../geometric.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../exponential.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat2x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat2x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat2x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat3x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat3x3.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat3x4.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat4x2.hpp \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat4x3.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cstring \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_errno_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_ssize_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_strings.h \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/type_ptr.inl \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/iostream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/ios \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/ios.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/memory_resource.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__ios/fpos.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__locale \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/shared_ptr.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/compare_three_way.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/three_way_comparable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/common_comparison_category.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/ordering.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/common_reference_with.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/convertible_to.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/same_as.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/equality_comparable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/boolean_testable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/totally_ordered.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__exception/exception.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/binary_function.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/operations.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/unary_function.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/operation_traits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/reference_wrapper.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/weak_result_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/addressof.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/ostream.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/access.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/allocation_guard.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/allocator_traits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/construct_at.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/voidify.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/move.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/new \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cstdlib \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/type_traits \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/hash.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/aligned_storage.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/type_list.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/aligned_union.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/alignment_of.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/can_extract_key.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/pair.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_const_ref.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/conjunction.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/dependent_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/disjunction.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/extent.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/has_unique_object_representation.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_all_extents.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/has_virtual_destructor.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_abstract.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_aggregate.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_arithmetic.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_floating_point.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_assignable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_bounded_array.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_callable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivial.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_class.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_compound.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_fundamental.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_null_pointer.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_constant_evaluated.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_copy_assignable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_default_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_destructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_empty.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_enum.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_final.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_implicitly_default_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_literal_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_member_pointer.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_move_assignable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_move_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_convertible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/lazy.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_copy_assignable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_copy_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_default_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_destructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_scalar.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_pointer.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_assignable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_object.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_union.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_pod.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_polymorphic.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_scoped_enum.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/underlying_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_signed.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_specialization.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_swappable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_assignable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_copy_assignable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_copy_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_copyable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cstdint \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_default_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_destructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_move_assignable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_move_constructible.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_unbounded_array.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_unsigned.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/make_signed.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/make_unsigned.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/maybe_const.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/negation.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/rank.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_pointer.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/result_of.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/type_identity.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/unwrap_ref.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/pointer_traits.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/limits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/allocator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/allocate_at_least.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/allocator_destructor.h \
@@ -359,14 +528,6 @@ CMakeFiles/GraphicsProject.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/exception_guard.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/unique_ptr.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/hash.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cstring \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/string.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/string.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_string.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_rsize_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_errno_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_ssize_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/typeinfo \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__atomic/memory_order.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__mutex/once_flag.h \
@@ -380,29 +541,6 @@ CMakeFiles/GraphicsProject.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/strong_order.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__bit/bit_cast.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/priority_tag.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cmath \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/promote.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/math.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/math.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/abs.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/copysign.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/error_functions.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/exponential_functions.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/fdim.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/fma.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/gamma.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/hyperbolic_functions.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/hypot.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/inverse_hyperbolic_functions.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/inverse_trigonometric_functions.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/logarithms.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/min_max.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/modulo.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/remainder.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/roots.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/rounding_functions.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/traits.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/trigonometric_functions.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/compare_strong_order_fallback.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/compare_weak_order_fallback.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/is_eq.h \
@@ -500,13 +638,6 @@ CMakeFiles/GraphicsProject.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__string/extern_template_lists.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_allocator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/noexcept_move_assign_container.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/climits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/limits.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/limits.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/machine/limits.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/arm/limits.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/arm/_limits.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/syslimits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/stdexcept \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/string_view \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/string_view.h \
@@ -960,6 +1091,56 @@ CMakeFiles/GraphicsProject.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/formatter_tuple.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/unistd.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/random \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/bernoulli_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/uniform_real_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/generate_canonical.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/binomial_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/cauchy_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/chi_squared_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/gamma_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/exponential_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/clamp_to_integral.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/default_random_engine.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/linear_congruential_engine.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/is_seed_sequence.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/discard_block_engine.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/discrete_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/numeric \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/accumulate.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/inner_product.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/iota.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/midpoint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/partial_sum.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/pstl_reduce.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/saturation_arithmetic.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/extreme_value_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/fisher_f_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/geometric_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/negative_binomial_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/poisson_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/normal_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/independent_bits_engine.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/knuth_b.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/shuffle_order_engine.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/lognormal_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/mersenne_twister_engine.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/piecewise_constant_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/piecewise_linear_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/random_device.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/ranlux.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/subtract_with_carry_engine.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/seed_seq.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/shader.h \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glad-3.3/include/glad/gl.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
@@ -981,142 +1162,7 @@ CMakeFiles/GraphicsProject.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/sstream \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/stb/stb_image.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/assert.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_assert.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_static_assert.h \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/glm.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/_fixes.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cfloat \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/float.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/float.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/float.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cassert \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/fwd.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_int.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/setup.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_float.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/precision.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/vec2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec2.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/vec3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec3.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/vec4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec4.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat2x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../fwd.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x2.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat2x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x3.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat2x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat2x4.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat3x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x2.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat3x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x3.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat3x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat3x4.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat4x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x2.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat4x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x3.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/mat4x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_mat4x4.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/trigonometric.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_trigonometric.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_trigonometric.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/_vectorize.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec1.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_vec1.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/exponential.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_exponential.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_exponential.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_vector_relational.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_vector_relational.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/common.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_common.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_common.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/packing.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_packing.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_packing.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_half.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/type_half.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/geometric.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_geometric.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_geometric.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/matrix.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_matrix.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../detail/precision.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../detail/setup.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../detail/type_mat.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../vec2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../vec3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../vec4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat2x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat2x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat2x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat3x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat3x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat3x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat4x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat4x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../mat4x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_matrix.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/../geometric.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/vector_relational.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/integer.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_integer.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/detail/func_integer.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/matrix_transform.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat4x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../vec2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../vec3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../vec4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/constants.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../detail/setup.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/constants.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/matrix_transform.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../geometric.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../trigonometric.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../matrix.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/type_ptr.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/quaternion.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../mat3x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../mat4x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../vec3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../vec4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../gtc/constants.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/quaternion.inl \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../trigonometric.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../geometric.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../gtc/../exponential.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat2x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat2x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat2x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat3x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat3x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat3x4.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat4x2.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/../mat4x3.hpp \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm/gtc/type_ptr.inl \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/unistd.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_posix_vdisable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/select.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_select.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_uuid_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/gethostuuid.h \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/skybox.h
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/shader_fwd.h \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/shader_manager.h \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/skybox.h \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/butterfly.h

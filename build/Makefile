@@ -179,6 +179,54 @@ external/glad-3.3/src/gl.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.s
 .PHONY : external/glad-3.3/src/gl.c.s
 
+external/stb/stb_image_impl.o: external/stb/stb_image_impl.cpp.o
+.PHONY : external/stb/stb_image_impl.o
+
+# target to build an object file
+external/stb/stb_image_impl.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.o
+.PHONY : external/stb/stb_image_impl.cpp.o
+
+external/stb/stb_image_impl.i: external/stb/stb_image_impl.cpp.i
+.PHONY : external/stb/stb_image_impl.i
+
+# target to preprocess a source file
+external/stb/stb_image_impl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.i
+.PHONY : external/stb/stb_image_impl.cpp.i
+
+external/stb/stb_image_impl.s: external/stb/stb_image_impl.cpp.s
+.PHONY : external/stb/stb_image_impl.s
+
+# target to generate assembly for a file
+external/stb/stb_image_impl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.s
+.PHONY : external/stb/stb_image_impl.cpp.s
+
+src/butterfly.o: src/butterfly.cpp.o
+.PHONY : src/butterfly.o
+
+# target to build an object file
+src/butterfly.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o
+.PHONY : src/butterfly.cpp.o
+
+src/butterfly.i: src/butterfly.cpp.i
+.PHONY : src/butterfly.i
+
+# target to preprocess a source file
+src/butterfly.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.i
+.PHONY : src/butterfly.cpp.i
+
+src/butterfly.s: src/butterfly.cpp.s
+.PHONY : src/butterfly.s
+
+# target to generate assembly for a file
+src/butterfly.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.s
+.PHONY : src/butterfly.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -202,6 +250,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/shader_manager.o: src/shader_manager.cpp.o
+.PHONY : src/shader_manager.o
+
+# target to build an object file
+src/shader_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.o
+.PHONY : src/shader_manager.cpp.o
+
+src/shader_manager.i: src/shader_manager.cpp.i
+.PHONY : src/shader_manager.i
+
+# target to preprocess a source file
+src/shader_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.i
+.PHONY : src/shader_manager.cpp.i
+
+src/shader_manager.s: src/shader_manager.cpp.s
+.PHONY : src/shader_manager.s
+
+# target to generate assembly for a file
+src/shader_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.s
+.PHONY : src/shader_manager.cpp.s
 
 src/skybox.o: src/skybox.cpp.o
 .PHONY : src/skybox.o
@@ -241,9 +313,18 @@ help:
 	@echo "... external/glad-3.3/src/gl.o"
 	@echo "... external/glad-3.3/src/gl.i"
 	@echo "... external/glad-3.3/src/gl.s"
+	@echo "... external/stb/stb_image_impl.o"
+	@echo "... external/stb/stb_image_impl.i"
+	@echo "... external/stb/stb_image_impl.s"
+	@echo "... src/butterfly.o"
+	@echo "... src/butterfly.i"
+	@echo "... src/butterfly.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/shader_manager.o"
+	@echo "... src/shader_manager.i"
+	@echo "... src/shader_manager.s"
 	@echo "... src/skybox.o"
 	@echo "... src/skybox.i"
 	@echo "... src/skybox.s"

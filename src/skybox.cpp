@@ -1,4 +1,5 @@
 #include "skybox.h"
+#include "shader.h"
 #include <vector>
 #include <iostream>
 
@@ -53,27 +54,41 @@ float skyboxVertices[] = {
      1.0f, -1.0f,  1.0f
 };
 
-Skybox::Skybox(const std::vector<std::string>& faces) {
+Skybox::Skybox(const std::vector<std::string>& faces, Shader& shader) 
+    : shader(shader) {
     // Generate VAO and VBO
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     
-    // Bind VAO
+    // Bind the VAO first, then bind and set VBOs and attribute pointers
     glBindVertexArray(VAO);
     
-    // Bind VBO and set vertex data
+    // Bind the VBO
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), &skyboxVertices, GL_STATIC_DRAW);
     
-    // Set vertex attribute pointers
-    glEnableVertexAttribArray(0);
+    // Upload vertex data to the VBO
+    glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), skyboxVertices, GL_STATIC_DRAW);
+    
+    // Set the vertex attribute pointers (position attribute)
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
     
-    // Unbind VAO
+    // Unbind the VBO first, then unbind the VAO
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
+    
+    // Check for OpenGL errors
+    GLenum err;
+    while ((err = glGetError()) != GL_NO_ERROR) {
+        std::cerr << "OpenGL error in Skybox constructor: " << err << std::endl;
+    }
     
     // Load cubemap texture
     cubemapTexture = loadCubemap(faces);
+    
+    if (cubemapTexture == 0) {
+        std::cerr << "Failed to load cubemap textures" << std::endl;
+    }
 }
 
 Skybox::~Skybox() {
@@ -83,20 +98,46 @@ Skybox::~Skybox() {
 }
 
 void Skybox::Draw(glm::mat4 view, glm::mat4 projection) {
-    // Change depth function so depth test passes when values are equal to depth buffer's content
+    // Save current depth function state
+    GLint oldDepthFunc;
+    glGetIntegerv(GL_DEPTH_FUNC, &oldDepthFunc);
+    
+    // Change depth function for skybox rendering
     glDepthFunc(GL_LEQUAL);
     
-    // Bind VAO and cubemap texture
+    // Use the shader program
+    shader.use();
+    
+    // Bind the VAO (which has the VBO and attribute pointers already set up)
     glBindVertexArray(VAO);
+    
+    // Remove translation from the view matrix for skybox
+    view = glm::mat4(glm::mat3(view));
+    
+    // Set shader uniforms
+    shader.setMat4("view", view);
+    shader.setMat4("projection", projection);
+    
+    // Bind cubemap texture to texture unit 0
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
+    shader.setInt("skybox", 0);  // Make sure the shader knows to use texture unit 0
     
     // Draw the skybox
     glDrawArrays(GL_TRIANGLES, 0, 36);
     
-    // Unbind VAO and reset depth function
+    // Check for OpenGL errors after drawing
+    GLenum err;
+    while ((err = glGetError()) != GL_NO_ERROR) {
+        std::cerr << "OpenGL error in Skybox::Draw: " << err << std::endl;
+    }
+    
+    // Cleanup - unbind VAO first, then texture
     glBindVertexArray(0);
-    glDepthFunc(GL_LESS);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
+    
+    // Restore original depth function
+    glDepthFunc(oldDepthFunc);
 }
 
 // Define STB_IMAGE_IMPLEMENTATION in exactly one source file

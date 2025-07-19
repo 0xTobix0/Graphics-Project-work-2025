@@ -100,10 +100,52 @@ CMakeFiles/GraphicsProject.dir/src/skybox.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GraphicsProject.dir/src/skybox.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/skybox.cpp -o CMakeFiles/GraphicsProject.dir/src/skybox.cpp.s
 
+CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.o: CMakeFiles/GraphicsProject.dir/flags.make
+CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.o: /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/shader_manager.cpp
+CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.o: CMakeFiles/GraphicsProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.o -MF CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.o.d -o CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.o -c /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/shader_manager.cpp
+
+CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/shader_manager.cpp > CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.i
+
+CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/shader_manager.cpp -o CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.s
+
+CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o: CMakeFiles/GraphicsProject.dir/flags.make
+CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o: /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/butterfly.cpp
+CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o: CMakeFiles/GraphicsProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o -MF CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o.d -o CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o -c /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/butterfly.cpp
+
+CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/butterfly.cpp > CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.i
+
+CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/butterfly.cpp -o CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.s
+
+CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.o: CMakeFiles/GraphicsProject.dir/flags.make
+CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.o: /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/stb/stb_image_impl.cpp
+CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.o: CMakeFiles/GraphicsProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.o -MF CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.o.d -o CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.o -c /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/stb/stb_image_impl.cpp
+
+CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/stb/stb_image_impl.cpp > CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.i
+
+CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/stb/stb_image_impl.cpp -o CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.s
+
 CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.o: CMakeFiles/GraphicsProject.dir/flags.make
 CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.o: /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glad-3.3/src/gl.c
 CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.o: CMakeFiles/GraphicsProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.o -MF CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.o.d -o CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.o -c /Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glad-3.3/src/gl.c
 
 CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.i: cmake_force
@@ -118,6 +160,9 @@ CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.s: cmake_force
 GraphicsProject_OBJECTS = \
 "CMakeFiles/GraphicsProject.dir/src/main.cpp.o" \
 "CMakeFiles/GraphicsProject.dir/src/skybox.cpp.o" \
+"CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.o" \
+"CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o" \
+"CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.o" \
 "CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.o"
 
 # External object files for target GraphicsProject
@@ -125,12 +170,31 @@ GraphicsProject_EXTERNAL_OBJECTS =
 
 GraphicsProject: CMakeFiles/GraphicsProject.dir/src/main.cpp.o
 GraphicsProject: CMakeFiles/GraphicsProject.dir/src/skybox.cpp.o
+GraphicsProject: CMakeFiles/GraphicsProject.dir/src/shader_manager.cpp.o
+GraphicsProject: CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o
+GraphicsProject: CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.o
 GraphicsProject: CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.o
 GraphicsProject: CMakeFiles/GraphicsProject.dir/build.make
 GraphicsProject: external/glfw-3.1.2/src/libglfw.3.1.dylib
 GraphicsProject: CMakeFiles/GraphicsProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable GraphicsProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable GraphicsProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GraphicsProject.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying shader: /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/butterfly.frag"
+	/opt/homebrew/bin/cmake -E copy /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/butterfly.frag /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/shaders/
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying shader: /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/butterfly.vert"
+	/opt/homebrew/bin/cmake -E copy /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/butterfly.vert /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/shaders/
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying shader: /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/fragment_shader.frag"
+	/opt/homebrew/bin/cmake -E copy /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/fragment_shader.frag /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/shaders/
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying shader: /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/simple.frag"
+	/opt/homebrew/bin/cmake -E copy /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/simple.frag /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/shaders/
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying shader: /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/simple.vert"
+	/opt/homebrew/bin/cmake -E copy /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/simple.vert /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/shaders/
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying shader: /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/skybox.frag"
+	/opt/homebrew/bin/cmake -E copy /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/skybox.frag /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/shaders/
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying shader: /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/skybox.vert"
+	/opt/homebrew/bin/cmake -E copy /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/skybox.vert /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/shaders/
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying shader: /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/vertex_shader.vert"
+	/opt/homebrew/bin/cmake -E copy /Users/namangupta/CascadeProjects/graphics-project-work-2025/shaders/vertex_shader.vert /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/shaders/
 
 # Rule to build all files generated by this target.
 CMakeFiles/GraphicsProject.dir/build: GraphicsProject

@@ -7,12 +7,17 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <vector>
 #include <cmath>
+#include <memory>
+#include <string>
 #include "shader.h"
+
+// Forward declaration to avoid including obj_loader.h here
+class OBJLoader;
 
 class Butterfly {
 public:
     // Constructor/Destructor
-    Butterfly(Shader& shader);
+    Butterfly(Shader& shader, const std::string& modelPath);
     ~Butterfly();
     
     // Update butterfly state (position, wing flapping, etc.)
@@ -21,6 +26,14 @@ public:
     // Draw the butterfly
     void Draw(const glm::mat4& view, const glm::mat4& projection);
     
+    // Set/get position
+    void SetPosition(const glm::vec3& pos) { position = pos; }
+    glm::vec3 GetPosition() const { return position; }
+    
+    // Set/get scale
+    void SetScale(float scale) { this->scale = scale; }
+    float GetScale() const { return scale; }
+    
 private:
     // Butterfly properties
     glm::vec3 position;
@@ -28,22 +41,20 @@ private:
     float wingAngle;
     float wingSpeed;
     float flightSpeed;
+    float scale;
     float timeSinceDirectionChange;
     
-    // OpenGL objects
-    unsigned int VAO, VBO;
+    // Model and shader
+    std::unique_ptr<OBJLoader> model;
     Shader& shader;
     
-    // Butterfly geometry data
-    std::vector<float> vertices;
+    // Animation state
+    float animationTime;
     
     // Helper methods
-    void GenerateGeometry();
     void UpdateDirection();
     glm::vec3 GetRandomDirection();
-    void AddVertex(const glm::vec3& position, const glm::vec3& color);
-    void AddTriangle(const glm::vec3& p1, const glm::vec3& p2, const glm::vec3& p3, const glm::vec3& color);
-    void AddQuad(const glm::vec3& p1, const glm::vec3& p2, const glm::vec3& p3, const glm::vec3& p4, const glm::vec3& color);
+    glm::mat4 GetModelMatrix() const;
 };
 
 #endif // BUTTERFLY_H

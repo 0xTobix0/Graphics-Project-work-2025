@@ -5,17 +5,17 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glfw-3.1.2/include -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glad-3.3/include -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1 -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/stb -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/src -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks
+C_INCLUDES = -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glfw/include -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glad-3.3/include -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1 -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/tinygltf -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/src -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/stb -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/tinygltf/tiny_gltf.h -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks
 
-C_FLAGSarm64 = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+C_FLAGSarm64 =  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
 
-C_FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+C_FLAGS =  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glfw-3.1.2/include -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glad-3.3/include -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1 -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/stb -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/src -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks
+CXX_INCLUDES = -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glfw/include -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glad-3.3/include -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1 -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/tinygltf -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/src -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/glm-0.9.7.1/glm -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/stb -I/Users/namangupta/CascadeProjects/graphics-project-work-2025/external/tinygltf/tiny_gltf.h -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks
 
-CXX_FLAGSarm64 = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+CXX_FLAGSarm64 = -std=c++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -std=c++17
 
-CXX_FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+CXX_FLAGS = -std=c++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -std=c++17
 

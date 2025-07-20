@@ -1,216 +1,173 @@
 #include "butterfly.h"
+#include "obj_loader.h"
 #include <iostream>
 #include <random>
-#include <cmath>
 #include <GLFW/glfw3.h>
+#include <glm/gtc/type_ptr.hpp>
 
 // Random number generation
 std::random_device rd;
 std::mt19937 gen(rd());
 std::uniform_real_distribution<float> dist(-1.0f, 1.0f);
 
-Butterfly::Butterfly(Shader& shader) 
-    : shader(shader), 
-      position(0.0f, 1.5f, 0.0f),
-      direction(1.0f, 0.0f, 0.0f),
-      wingAngle(0.0f),
-      wingSpeed(10.0f),
-      flightSpeed(1.0f),
-      timeSinceDirectionChange(0.0f) {
+Butterfly::Butterfly(Shader& shader, const std::string& modelPath) 
+    : shader(shader), animationTime(0.0f) {
+    // Initialize butterfly properties
+    position = glm::vec3(0.0f, 1.5f, -5.0f);  // Position further back in the scene
+    direction = GetRandomDirection();
+    wingAngle = 0.0f;
+    wingSpeed = 5.0f;
+    flightSpeed = 0.5f;
+    scale = 0.01f;  // Reduced scale to make the butterfly smaller
+    timeSinceDirectionChange = 0.0f;
     
-    // Generate butterfly geometry
-    GenerateGeometry();
-    
-    // Set up OpenGL buffers
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-    
-    glBindVertexArray(VAO);
-    
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW);
-    
-    // Position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-    
-    // Color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
-    
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
-    
-    // Initial random direction
-    UpdateDirection();
+    // Initialize the OBJ loader with the butterfly model
+    model = std::make_unique<OBJLoader>(shader);
+    if (model) {
+        std::cout << "Loading butterfly model from: " << modelPath << std::endl;
+        if (!model->LoadModel(modelPath)) {
+            std::cerr << "Failed to load butterfly model: " << modelPath << std::endl;
+        } else {
+            std::cout << "Successfully loaded butterfly model" << std::endl;
+        }
+    } else {
+        std::cerr << "Failed to create OBJLoader instance" << std::endl;
+    }
 }
 
-Butterfly::~Butterfly() {
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
-}
+Butterfly::~Butterfly() = default;
 
 void Butterfly::Update(float deltaTime) {
-    // Update wing flapping
-    wingAngle += wingSpeed * deltaTime;
-    
-    // Update position
+    // Update position based on direction and speed
     position += direction * flightSpeed * deltaTime;
     
-    // Change direction occasionally
+    // Update wing flapping animation
+    wingAngle += wingSpeed * deltaTime;
+    animationTime += deltaTime;
+    
+    // Randomly change direction occasionally
     timeSinceDirectionChange += deltaTime;
     if (timeSinceDirectionChange > 3.0f) {
-        float chance = dist(gen);
-        if (chance > 0.7f) {
+        if (std::rand() % 100 < 5) {  // 5% chance to change direction each second after 3 seconds
             UpdateDirection();
+            timeSinceDirectionChange = 0.0f;
         }
-        timeSinceDirectionChange = 0.0f;
     }
     
-    // Simple boundary checking
-    if (position.x > 10.0f || position.x < -10.0f || 
-        position.z > 10.0f || position.z < -10.0f) {
+    // Keep butterfly within bounds
+    const float boundary = 10.0f;
+    if (abs(position.x) > boundary || abs(position.z) > boundary) {
         direction = glm::normalize(glm::vec3(-position.x, 0.0f, -position.z));
     }
     
-    // Keep butterfly at a reasonable height
-    position.y = 1.5f + sin(glfwGetTime() * 0.5f) * 0.3f;
+    // Keep butterfly at reasonable height
+    if (position.y < 0.5f) {
+        position.y = 0.5f;
+        direction.y = abs(direction.y);
+    } else if (position.y > 5.0f) {
+        position.y = 5.0f;
+        direction.y = -abs(direction.y);
+    }
 }
 
 void Butterfly::Draw(const glm::mat4& view, const glm::mat4& projection) {
+    if (!model) {
+        std::cerr << "Butterfly::Draw: No model to draw!" << std::endl;
+        return;
+    }
+    
+    static int frameCount = 0;
+    frameCount++;
+    
+    // Only print debug info every 60 frames to avoid flooding the console
+    if (frameCount % 60 == 0) {
+        std::cout << "\n=== Butterfly Debug Info ===" << std::endl;
+        std::cout << "Position: (" << position.x << ", " << position.y << ", " << position.z << ")" << std::endl;
+        
+        glm::mat4 modelMatrix = GetModelMatrix();
+        // Extract translation (last column of the matrix)
+        glm::vec3 translation = glm::vec3(modelMatrix[3]);
+        
+        // Extract scale (length of the basis vectors)
+        glm::vec3 scale;
+        scale.x = glm::length(glm::vec3(modelMatrix[0]));
+        scale.y = glm::length(glm::vec3(modelMatrix[1]));
+        scale.z = glm::length(glm::vec3(modelMatrix[2]));
+        
+        std::cout << "Model Scale: (" << scale.x << ", " << scale.y << ", " << scale.z << ")" << std::endl;
+        std::cout << "Model Translation: (" << translation.x << ", " << translation.y << ", " << translation.z << ")" << std::endl;
+        
+        // Get view position (camera position)
+        glm::vec3 viewPos = glm::vec3(glm::inverse(view)[3]);
+        std::cout << "Camera Position: (" << viewPos.x << ", " << viewPos.y << ", " << viewPos.z << ")" << std::endl;
+        
+        // Calculate distance from camera
+        float distance = glm::distance(translation, viewPos);
+        std::cout << "Distance from camera: " << distance << std::endl;
+    }
+    
+    // Use the shader
     shader.use();
     
-    // Calculate model matrix
-    glm::mat4 model = glm::mat4(1.0f);
-    model = glm::translate(model, position);
+    // Set view position (extract from view matrix)
+    glm::vec3 viewPos = glm::vec3(glm::inverse(view)[3]);
+    shader.setVec3("viewPos", viewPos);
     
-    // Make butterfly face the direction it's moving
-    float angle = atan2(direction.x, direction.z);
-    model = glm::rotate(model, angle, glm::vec3(0.0f, 1.0f, 0.0f));
-    
-    // Apply wing flapping animation
-    float leftWingAngle = sin(wingAngle) * 0.5f + 0.5f;  // 0 to 1
-    float rightWingAngle = -sin(wingAngle) * 0.5f + 0.5f; // 1 to 0
-    
-    // Set shader uniforms
-    shader.setMat4("model", model);
+    // Set up model matrix
+    glm::mat4 modelMatrix = GetModelMatrix();
+    shader.setMat4("model", modelMatrix);
     shader.setMat4("view", view);
     shader.setMat4("projection", projection);
+    
+    // Update light position to follow the camera (or set a fixed position)
+    glm::vec3 lightPos = viewPos + glm::vec3(5.0f, 5.0f, 5.0f);
+    shader.setVec3("light.position", lightPos);
+    
+    // Set light properties (make sure these match your shader)
+    shader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
+    shader.setVec3("light.diffuse", 0.8f, 0.8f, 0.8f);
+    shader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+    
+    // Calculate wing angles for animation (reduced amplitude for debugging)
+    float leftWingAngle = 0.2f * sin(wingAngle);
+    float rightWingAngle = 0.2f * sin(wingAngle + 3.14159f); // Opposite phase for right wing
+    
+    // Set wing animation uniforms
     shader.setFloat("leftWingAngle", leftWingAngle);
     shader.setFloat("rightWingAngle", rightWingAngle);
     
-    // Bind VAO and set up vertex attributes
-    glBindVertexArray(VAO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    // Calculate normal matrix
+    glm::mat3 normalMatrix = glm::transpose(glm::inverse(glm::mat3(modelMatrix)));
+    shader.setMat3("normalMatrix", normalMatrix);
     
-    // Position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-    
-    // Color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
-    
-    // Draw butterfly
-    glDrawArrays(GL_TRIANGLES, 0, vertices.size() / 6); // 6 floats per vertex (3 position, 3 color)
-    
-    // Unbind VAO
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
+    // Draw the model
+    model->Draw(shader);
 }
 
-void Butterfly::GenerateGeometry() {
-    // Butterfly body (a thin box)
-    float bodyLength = 0.5f;
-    float bodyWidth = 0.1f;
-    float bodyHeight = 0.1f;
+glm::mat4 Butterfly::GetModelMatrix() const {
+    // Start with identity matrix
+    glm::mat4 model = glm::mat4(1.0f);
     
-    // Colors
-    glm::vec3 bodyColor(0.2f, 0.2f, 0.2f);  // Dark gray
-    glm::vec3 wingColor(0.8f, 0.2f, 0.8f);   // Purple
+    // Apply translation (position in world space)
+    model = glm::translate(model, position);
     
-    // Body vertices (a thin box)
-    // Front face
-    AddQuad(
-        glm::vec3(-bodyLength/2, -bodyHeight/2, -bodyWidth/2),
-        glm::vec3(bodyLength/2, -bodyHeight/2, -bodyWidth/2),
-        glm::vec3(bodyLength/2, bodyHeight/2, -bodyWidth/2),
-        glm::vec3(-bodyLength/2, bodyHeight/2, -bodyWidth/2),
-        bodyColor
-    );
+    // Rotate the model to face the camera (simplified for now)
+    // This assumes the model's forward is along the -Z axis
+    model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
     
-    // Back face
-    AddQuad(
-        glm::vec3(-bodyLength/2, -bodyHeight/2, bodyWidth/2),
-        glm::vec3(bodyLength/2, -bodyHeight/2, bodyWidth/2),
-        glm::vec3(bodyLength/2, bodyHeight/2, bodyWidth/2),
-        glm::vec3(-bodyLength/2, bodyHeight/2, bodyWidth/2),
-        bodyColor
-    );
+    // Apply uniform scaling
+    model = glm::scale(model, glm::vec3(scale));
     
-    // Left wing (will be animated)
-    float wingSize = 0.5f;
-    glm::vec3 wingOrigin(-bodyLength/4, 0.0f, 0.0f);
+    // Debug output (uncomment if needed)
+    // std::cout << "Butterfly position: (" << position.x << ", " << position.y << ", " << position.z << ")" << std::endl;
+    // std::cout << "Butterfly scale: " << scale << std::endl;
     
-    // Left wing (top)
-    AddTriangle(
-        wingOrigin,
-        wingOrigin + glm::vec3(-wingSize, 0.0f, 0.0f),
-        wingOrigin + glm::vec3(0.0f, wingSize, 0.0f),
-        wingColor
-    );
-    
-    // Left wing (bottom)
-    AddTriangle(
-        wingOrigin,
-        wingOrigin + glm::vec3(-wingSize, 0.0f, 0.0f),
-        wingOrigin + glm::vec3(0.0f, -wingSize, 0.0f),
-        wingColor
-    );
-    
-    // Right wing (top)
-    AddTriangle(
-        -wingOrigin,
-        -wingOrigin + glm::vec3(wingSize, 0.0f, 0.0f),
-        -wingOrigin + glm::vec3(0.0f, wingSize, 0.0f),
-        wingColor
-    );
-    
-    // Right wing (bottom)
-    AddTriangle(
-        -wingOrigin,
-        -wingOrigin + glm::vec3(wingSize, 0.0f, 0.0f),
-        -wingOrigin + glm::vec3(0.0f, -wingSize, 0.0f),
-        wingColor
-    );
-}
-
-void Butterfly::AddVertex(const glm::vec3& position, const glm::vec3& color) {
-    // Add position
-    vertices.push_back(position.x);
-    vertices.push_back(position.y);
-    vertices.push_back(position.z);
-    // Add color
-    vertices.push_back(color.r);
-    vertices.push_back(color.g);
-    vertices.push_back(color.b);
-}
-
-void Butterfly::AddTriangle(const glm::vec3& p1, const glm::vec3& p2, const glm::vec3& p3, const glm::vec3& color) {
-    AddVertex(p1, color);
-    AddVertex(p2, color);
-    AddVertex(p3, color);
-}
-
-void Butterfly::AddQuad(const glm::vec3& p1, const glm::vec3& p2, const glm::vec3& p3, const glm::vec3& p4, const glm::vec3& color) {
-    // First triangle
-    AddTriangle(p1, p2, p3, color);
-    // Second triangle
-    AddTriangle(p1, p3, p4, color);
+    return model;
 }
 
 void Butterfly::UpdateDirection() {
-    direction = GetRandomDirection();
+    // Slightly randomize the current direction
+    direction = glm::normalize(direction + GetRandomDirection() * 0.3f);
 }
 
 glm::vec3 Butterfly::GetRandomDirection() {

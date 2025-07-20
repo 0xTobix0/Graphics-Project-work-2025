@@ -5,29 +5,54 @@ project(GraphicsProject)
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Include external libraries
-add_subdirectory(external)
+# Set C++17 flags only for C++ files
+if(MSVC)
+    add_compile_options(
+        $<$<COMPILE_LANGUAGE:CXX>:/std:c++17>
+    )
+else()
+    add_compile_options(
+        $<$<COMPILE_LANGUAGE:CXX>:-std=c++17>
+    )
+endif()
+
+# Add GLFW
+add_subdirectory(external/glfw)
 
 # Find required packages
 find_package(OpenGL REQUIRED)
 
+# Enable C++11 for tinygltf
+set(CMAKE_CXX_STANDARD 11)  # tinygltf requires C++11
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # Include directories
 include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR}/external/glfw-3.1.2/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/external/glad-3.3/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/external/glm-0.9.7.1
-    ${CMAKE_CURRENT_SOURCE_DIR}/external/stb
-    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/external/glfw/include
+    ${CMAKE_SOURCE_DIR}/external/glad-3.3/include
+    ${CMAKE_SOURCE_DIR}/external/glm-0.9.7.1
+    ${CMAKE_SOURCE_DIR}/external/tinygltf
+    ${CMAKE_SOURCE_DIR}/src
     ${CMAKE_CURRENT_SOURCE_DIR}/external/glm-0.9.7.1/glm
     ${CMAKE_CURRENT_SOURCE_DIR}/external
+    ${CMAKE_CURRENT_SOURCE_DIR}/external/tinygltf
+    ${CMAKE_CURRENT_SOURCE_DIR}/external/stb
+    ${CMAKE_CURRENT_SOURCE_DIR}/external/tinygltf/tiny_gltf.h
 )
 
-# Add STB image source file
-set(STB_IMAGE_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/external/stb/stb_image_impl.cpp)
-if(NOT EXISTS ${STB_IMAGE_SOURCE})
-    file(WRITE ${STB_IMAGE_SOURCE} "#define STB_IMAGE_IMPLEMENTATION\n#include \"stb_image.h\"")
-endif()
+# Add tinygltf source files (kept for potential future use)
+set(TINYGLTF_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/external/tinygltf/tiny_gltf.cc
+)
+
+# Create a library for tinygltf (kept for potential future use)
+add_library(tinygltf STATIC ${TINYGLTF_SOURCES})
+target_include_directories(tinygltf PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/external/tinygltf
+    ${CMAKE_CURRENT_SOURCE_DIR}/external/stb
+)
 
 # Add executable
 add_executable(${PROJECT_NAME}
@@ -35,7 +60,7 @@ add_executable(${PROJECT_NAME}
     src/skybox.cpp
     src/shader_manager.cpp
     src/butterfly.cpp
-    ${STB_IMAGE_SOURCE}
+    src/obj_loader.cpp
     external/glad-3.3/src/gl.c
 )
 
@@ -45,6 +70,7 @@ target_link_libraries(${PROJECT_NAME}
     glfw
     ${CMAKE_DL_LIBS}
     m
+    tinygltf
 )
 
 # Copy shaders to build directory

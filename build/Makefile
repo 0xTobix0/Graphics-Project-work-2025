@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles /Users/namangupta/CascadeProjects/graphics-project-work-2025/build//CMakeFiles/progress.marks
@@ -117,6 +162,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named tinygltf
+
+# Build rule for target.
+tinygltf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tinygltf
+.PHONY : tinygltf
+
+# fast build rule for target.
+tinygltf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/build
+.PHONY : tinygltf/fast
+
+#=============================================================================
 # Target rules for targets named GraphicsProject
 
 # Build rule for target.
@@ -130,17 +188,30 @@ GraphicsProject/fast:
 .PHONY : GraphicsProject/fast
 
 #=============================================================================
-# Target rules for targets named glad
+# Target rules for targets named uninstall
 
 # Build rule for target.
-glad: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad
-.PHONY : glad
+uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
 
 # fast build rule for target.
-glad/fast:
-	$(MAKE) $(MAKESILENT) -f external/glad-3.3/CMakeFiles/glad.dir/build.make external/glad-3.3/CMakeFiles/glad.dir/build
-.PHONY : glad/fast
+uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/CMakeFiles/uninstall.dir/build.make external/glfw/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named update_mappings
+
+# Build rule for target.
+update_mappings: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 update_mappings
+.PHONY : update_mappings
+
+# fast build rule for target.
+update_mappings/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/build
+.PHONY : update_mappings/fast
 
 #=============================================================================
 # Target rules for targets named glfw
@@ -152,8 +223,385 @@ glfw: cmake_check_build_system
 
 # fast build rule for target.
 glfw/fast:
-	$(MAKE) $(MAKESILENT) -f external/glfw-3.1.2/src/CMakeFiles/glfw.dir/build.make external/glfw-3.1.2/src/CMakeFiles/glfw.dir/build
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
 .PHONY : glfw/fast
+
+#=============================================================================
+# Target rules for targets named boing
+
+# Build rule for target.
+boing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 boing
+.PHONY : boing
+
+# fast build rule for target.
+boing/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/boing.dir/build.make external/glfw/examples/CMakeFiles/boing.dir/build
+.PHONY : boing/fast
+
+#=============================================================================
+# Target rules for targets named gears
+
+# Build rule for target.
+gears: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gears
+.PHONY : gears
+
+# fast build rule for target.
+gears/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/gears.dir/build.make external/glfw/examples/CMakeFiles/gears.dir/build
+.PHONY : gears/fast
+
+#=============================================================================
+# Target rules for targets named heightmap
+
+# Build rule for target.
+heightmap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 heightmap
+.PHONY : heightmap
+
+# fast build rule for target.
+heightmap/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/heightmap.dir/build.make external/glfw/examples/CMakeFiles/heightmap.dir/build
+.PHONY : heightmap/fast
+
+#=============================================================================
+# Target rules for targets named offscreen
+
+# Build rule for target.
+offscreen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 offscreen
+.PHONY : offscreen
+
+# fast build rule for target.
+offscreen/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/offscreen.dir/build.make external/glfw/examples/CMakeFiles/offscreen.dir/build
+.PHONY : offscreen/fast
+
+#=============================================================================
+# Target rules for targets named particles
+
+# Build rule for target.
+particles: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 particles
+.PHONY : particles
+
+# fast build rule for target.
+particles/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/particles.dir/build.make external/glfw/examples/CMakeFiles/particles.dir/build
+.PHONY : particles/fast
+
+#=============================================================================
+# Target rules for targets named sharing
+
+# Build rule for target.
+sharing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sharing
+.PHONY : sharing
+
+# fast build rule for target.
+sharing/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/sharing.dir/build.make external/glfw/examples/CMakeFiles/sharing.dir/build
+.PHONY : sharing/fast
+
+#=============================================================================
+# Target rules for targets named simple
+
+# Build rule for target.
+simple: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple
+.PHONY : simple
+
+# fast build rule for target.
+simple/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/build
+.PHONY : simple/fast
+
+#=============================================================================
+# Target rules for targets named splitview
+
+# Build rule for target.
+splitview: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 splitview
+.PHONY : splitview
+
+# fast build rule for target.
+splitview/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/splitview.dir/build.make external/glfw/examples/CMakeFiles/splitview.dir/build
+.PHONY : splitview/fast
+
+#=============================================================================
+# Target rules for targets named wave
+
+# Build rule for target.
+wave: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 wave
+.PHONY : wave
+
+# fast build rule for target.
+wave/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/wave.dir/build.make external/glfw/examples/CMakeFiles/wave.dir/build
+.PHONY : wave/fast
+
+#=============================================================================
+# Target rules for targets named clipboard
+
+# Build rule for target.
+clipboard: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clipboard
+.PHONY : clipboard
+
+# fast build rule for target.
+clipboard/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/clipboard.dir/build.make external/glfw/tests/CMakeFiles/clipboard.dir/build
+.PHONY : clipboard/fast
+
+#=============================================================================
+# Target rules for targets named events
+
+# Build rule for target.
+events: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 events
+.PHONY : events
+
+# fast build rule for target.
+events/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/events.dir/build.make external/glfw/tests/CMakeFiles/events.dir/build
+.PHONY : events/fast
+
+#=============================================================================
+# Target rules for targets named msaa
+
+# Build rule for target.
+msaa: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msaa
+.PHONY : msaa
+
+# fast build rule for target.
+msaa/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/msaa.dir/build.make external/glfw/tests/CMakeFiles/msaa.dir/build
+.PHONY : msaa/fast
+
+#=============================================================================
+# Target rules for targets named glfwinfo
+
+# Build rule for target.
+glfwinfo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glfwinfo
+.PHONY : glfwinfo
+
+# fast build rule for target.
+glfwinfo/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/build
+.PHONY : glfwinfo/fast
+
+#=============================================================================
+# Target rules for targets named iconify
+
+# Build rule for target.
+iconify: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iconify
+.PHONY : iconify
+
+# fast build rule for target.
+iconify/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/iconify.dir/build.make external/glfw/tests/CMakeFiles/iconify.dir/build
+.PHONY : iconify/fast
+
+#=============================================================================
+# Target rules for targets named monitors
+
+# Build rule for target.
+monitors: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 monitors
+.PHONY : monitors
+
+# fast build rule for target.
+monitors/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/build
+.PHONY : monitors/fast
+
+#=============================================================================
+# Target rules for targets named reopen
+
+# Build rule for target.
+reopen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reopen
+.PHONY : reopen
+
+# fast build rule for target.
+reopen/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/reopen.dir/build.make external/glfw/tests/CMakeFiles/reopen.dir/build
+.PHONY : reopen/fast
+
+#=============================================================================
+# Target rules for targets named cursor
+
+# Build rule for target.
+cursor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cursor
+.PHONY : cursor
+
+# fast build rule for target.
+cursor/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/cursor.dir/build.make external/glfw/tests/CMakeFiles/cursor.dir/build
+.PHONY : cursor/fast
+
+#=============================================================================
+# Target rules for targets named empty
+
+# Build rule for target.
+empty: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 empty
+.PHONY : empty
+
+# fast build rule for target.
+empty/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/empty.dir/build.make external/glfw/tests/CMakeFiles/empty.dir/build
+.PHONY : empty/fast
+
+#=============================================================================
+# Target rules for targets named gamma
+
+# Build rule for target.
+gamma: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gamma
+.PHONY : gamma
+
+# fast build rule for target.
+gamma/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/gamma.dir/build.make external/glfw/tests/CMakeFiles/gamma.dir/build
+.PHONY : gamma/fast
+
+#=============================================================================
+# Target rules for targets named icon
+
+# Build rule for target.
+icon: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 icon
+.PHONY : icon
+
+# fast build rule for target.
+icon/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/icon.dir/build.make external/glfw/tests/CMakeFiles/icon.dir/build
+.PHONY : icon/fast
+
+#=============================================================================
+# Target rules for targets named inputlag
+
+# Build rule for target.
+inputlag: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inputlag
+.PHONY : inputlag
+
+# fast build rule for target.
+inputlag/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/inputlag.dir/build.make external/glfw/tests/CMakeFiles/inputlag.dir/build
+.PHONY : inputlag/fast
+
+#=============================================================================
+# Target rules for targets named joysticks
+
+# Build rule for target.
+joysticks: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 joysticks
+.PHONY : joysticks
+
+# fast build rule for target.
+joysticks/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/joysticks.dir/build.make external/glfw/tests/CMakeFiles/joysticks.dir/build
+.PHONY : joysticks/fast
+
+#=============================================================================
+# Target rules for targets named opacity
+
+# Build rule for target.
+opacity: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opacity
+.PHONY : opacity
+
+# fast build rule for target.
+opacity/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/build
+.PHONY : opacity/fast
+
+#=============================================================================
+# Target rules for targets named tearing
+
+# Build rule for target.
+tearing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tearing
+.PHONY : tearing
+
+# fast build rule for target.
+tearing/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/tearing.dir/build.make external/glfw/tests/CMakeFiles/tearing.dir/build
+.PHONY : tearing/fast
+
+#=============================================================================
+# Target rules for targets named threads
+
+# Build rule for target.
+threads: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 threads
+.PHONY : threads
+
+# fast build rule for target.
+threads/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/threads.dir/build.make external/glfw/tests/CMakeFiles/threads.dir/build
+.PHONY : threads/fast
+
+#=============================================================================
+# Target rules for targets named timeout
+
+# Build rule for target.
+timeout: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 timeout
+.PHONY : timeout
+
+# fast build rule for target.
+timeout/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/timeout.dir/build.make external/glfw/tests/CMakeFiles/timeout.dir/build
+.PHONY : timeout/fast
+
+#=============================================================================
+# Target rules for targets named title
+
+# Build rule for target.
+title: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 title
+.PHONY : title
+
+# fast build rule for target.
+title/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/title.dir/build.make external/glfw/tests/CMakeFiles/title.dir/build
+.PHONY : title/fast
+
+#=============================================================================
+# Target rules for targets named triangle-vulkan
+
+# Build rule for target.
+triangle-vulkan: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 triangle-vulkan
+.PHONY : triangle-vulkan
+
+# fast build rule for target.
+triangle-vulkan/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/triangle-vulkan.dir/build.make external/glfw/tests/CMakeFiles/triangle-vulkan.dir/build
+.PHONY : triangle-vulkan/fast
+
+#=============================================================================
+# Target rules for targets named windows
+
+# Build rule for target.
+windows: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 windows
+.PHONY : windows
+
+# fast build rule for target.
+windows/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/build
+.PHONY : windows/fast
 
 external/glad-3.3/src/gl.o: external/glad-3.3/src/gl.c.o
 .PHONY : external/glad-3.3/src/gl.o
@@ -179,29 +627,29 @@ external/glad-3.3/src/gl.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.s
 .PHONY : external/glad-3.3/src/gl.c.s
 
-external/stb/stb_image_impl.o: external/stb/stb_image_impl.cpp.o
-.PHONY : external/stb/stb_image_impl.o
+external/tinygltf/tiny_gltf.o: external/tinygltf/tiny_gltf.cc.o
+.PHONY : external/tinygltf/tiny_gltf.o
 
 # target to build an object file
-external/stb/stb_image_impl.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.o
-.PHONY : external/stb/stb_image_impl.cpp.o
+external/tinygltf/tiny_gltf.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/external/tinygltf/tiny_gltf.cc.o
+.PHONY : external/tinygltf/tiny_gltf.cc.o
 
-external/stb/stb_image_impl.i: external/stb/stb_image_impl.cpp.i
-.PHONY : external/stb/stb_image_impl.i
+external/tinygltf/tiny_gltf.i: external/tinygltf/tiny_gltf.cc.i
+.PHONY : external/tinygltf/tiny_gltf.i
 
 # target to preprocess a source file
-external/stb/stb_image_impl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.i
-.PHONY : external/stb/stb_image_impl.cpp.i
+external/tinygltf/tiny_gltf.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/external/tinygltf/tiny_gltf.cc.i
+.PHONY : external/tinygltf/tiny_gltf.cc.i
 
-external/stb/stb_image_impl.s: external/stb/stb_image_impl.cpp.s
-.PHONY : external/stb/stb_image_impl.s
+external/tinygltf/tiny_gltf.s: external/tinygltf/tiny_gltf.cc.s
+.PHONY : external/tinygltf/tiny_gltf.s
 
 # target to generate assembly for a file
-external/stb/stb_image_impl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/stb/stb_image_impl.cpp.s
-.PHONY : external/stb/stb_image_impl.cpp.s
+external/tinygltf/tiny_gltf.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/external/tinygltf/tiny_gltf.cc.s
+.PHONY : external/tinygltf/tiny_gltf.cc.s
 
 src/butterfly.o: src/butterfly.cpp.o
 .PHONY : src/butterfly.o
@@ -250,6 +698,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/obj_loader.o: src/obj_loader.cpp.o
+.PHONY : src/obj_loader.o
+
+# target to build an object file
+src/obj_loader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/obj_loader.cpp.o
+.PHONY : src/obj_loader.cpp.o
+
+src/obj_loader.i: src/obj_loader.cpp.i
+.PHONY : src/obj_loader.i
+
+# target to preprocess a source file
+src/obj_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/obj_loader.cpp.i
+.PHONY : src/obj_loader.cpp.i
+
+src/obj_loader.s: src/obj_loader.cpp.s
+.PHONY : src/obj_loader.s
+
+# target to generate assembly for a file
+src/obj_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/obj_loader.cpp.s
+.PHONY : src/obj_loader.cpp.s
 
 src/shader_manager.o: src/shader_manager.cpp.o
 .PHONY : src/shader_manager.o
@@ -306,22 +778,60 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... uninstall"
+	@echo "... update_mappings"
 	@echo "... GraphicsProject"
-	@echo "... glad"
+	@echo "... boing"
+	@echo "... clipboard"
+	@echo "... cursor"
+	@echo "... empty"
+	@echo "... events"
+	@echo "... gamma"
+	@echo "... gears"
 	@echo "... glfw"
+	@echo "... glfwinfo"
+	@echo "... heightmap"
+	@echo "... icon"
+	@echo "... iconify"
+	@echo "... inputlag"
+	@echo "... joysticks"
+	@echo "... monitors"
+	@echo "... msaa"
+	@echo "... offscreen"
+	@echo "... opacity"
+	@echo "... particles"
+	@echo "... reopen"
+	@echo "... sharing"
+	@echo "... simple"
+	@echo "... splitview"
+	@echo "... tearing"
+	@echo "... threads"
+	@echo "... timeout"
+	@echo "... tinygltf"
+	@echo "... title"
+	@echo "... triangle-vulkan"
+	@echo "... wave"
+	@echo "... windows"
 	@echo "... external/glad-3.3/src/gl.o"
 	@echo "... external/glad-3.3/src/gl.i"
 	@echo "... external/glad-3.3/src/gl.s"
-	@echo "... external/stb/stb_image_impl.o"
-	@echo "... external/stb/stb_image_impl.i"
-	@echo "... external/stb/stb_image_impl.s"
+	@echo "... external/tinygltf/tiny_gltf.o"
+	@echo "... external/tinygltf/tiny_gltf.i"
+	@echo "... external/tinygltf/tiny_gltf.s"
 	@echo "... src/butterfly.o"
 	@echo "... src/butterfly.i"
 	@echo "... src/butterfly.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/obj_loader.o"
+	@echo "... src/obj_loader.i"
+	@echo "... src/obj_loader.s"
 	@echo "... src/shader_manager.o"
 	@echo "... src/shader_manager.i"
 	@echo "... src/shader_manager.s"

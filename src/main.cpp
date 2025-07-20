@@ -9,15 +9,24 @@
 #include <random>
 #include <string>
 
-// Include headers in the correct order
+// Include standard headers
+#include <iostream>
+#include <memory>
+#include <vector>
+
+// Include GLAD first to ensure OpenGL headers are included in the correct order
+#include <glad/gl.h>
+#include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
+// Include project headers
 #include "shader.h"
 #include "shader_fwd.h"
 #include "shader_manager.h"
 #include "skybox.h"
 #include "butterfly.h"
-
-// Include the shader manager header
-#include "shader_manager.h"
 
 // Function declarations
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -95,6 +104,36 @@ int main()
     
     // Initialize shaders using the shader manager
     initShaders();
+    
+    // Debug shader loading
+    if (!butterflyShader) {
+        std::cerr << "ERROR: Butterfly shader failed to load!" << std::endl;
+    } else {
+        std::cout << "Butterfly shader loaded successfully (ID: " << butterflyShader->ID << ")" << std::endl;
+    }
+    
+    // Create butterfly with OBJ model - use path to the new model
+    std::string butterflyModelPath = "/Users/namangupta/Downloads/new butterfly/source/Bake/Matiposa_001.obj";
+    std::cout << "Loading butterfly model from: " << butterflyModelPath << std::endl;
+    std::vector<std::unique_ptr<Butterfly>> butterflies;
+    
+    // Create a single butterfly for now
+    Butterfly* butterfly = new Butterfly(*butterflyShader, butterflyModelPath);
+    
+    // Position the butterfly in front of the camera
+    butterfly->SetPosition(glm::vec3(0.0f, 0.0f, -3.0f));
+    
+    // Set a reasonable scale
+    butterfly->SetScale(0.1f);
+    
+    // Add to the vector
+    butterflies.emplace_back(butterfly);
+    
+    // Print debug info
+    std::cout << "Butterfly created at position: (" 
+              << butterfly->GetPosition().x << ", " 
+              << butterfly->GetPosition().y << ", " 
+              << butterfly->GetPosition().z << ")" << std::endl;
     
     // Load skybox
     std::vector<std::string> faces = {
@@ -198,8 +237,17 @@ int main()
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
     
-    // Create the butterfly
-    Butterfly butterfly(*butterflyShader);
+    // Update butterfly positions (they were already created earlier)
+    for (size_t i = 0; i < butterflies.size(); ++i) {
+        // Position butterflies in different locations
+        float angle = (float)i / butterflies.size() * 2.0f * 3.14159f;
+        float radius = 3.0f + (i * 2.0f);
+        float x = sin(angle) * radius;
+        float z = cos(angle) * radius;
+        
+        butterflies[i]->SetPosition(glm::vec3(x, 1.5f, z));
+        butterflies[i]->SetScale(0.005f);
+    }
     
     // For timing
     float lastFrame = 0.0f;
@@ -217,34 +265,46 @@ int main()
         // Input
         processInput(window);
         
-        // Clear the screen and depth buffer
+        // Render
+        // ------
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
-        // Create projection matrix
+        // Calculate projection and view matrices
         glm::mat4 projection = glm::perspective(glm::radians(fov), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-        
-        // Create view matrix
         glm::mat4 view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
         
-        // Update butterfly
-        butterfly.Update(deltaTime);
+        // Update and draw butterflies
+        glEnable(GL_DEPTH_TEST);
+        for (size_t i = 0; i < butterflies.size(); ++i) {
+            auto& butterfly = butterflies[i];
+            if (butterfly) {
+                // Update butterfly state
+                butterfly->Update(deltaTime);
+                
+                // Get position for debugging
+                glm::vec3 pos = butterfly->GetPosition();
+                
+                // Only print position occasionally to reduce console spam
+                static int frameCount = 0;
+                if (frameCount++ % 60 == 0) {  // Print every 60 frames
+                    std::cout << "Drawing butterfly " << i << " at (" 
+                              << pos.x << ", " << pos.y << ", " << pos.z << ")" << std::endl;
+                }
+                
+                // Draw the butterfly
+                butterfly->Draw(view, projection);
+                
+                // Check for OpenGL errors after drawing
+                GLenum err;
+                while ((err = glGetError()) != GL_NO_ERROR) {
+                    std::cerr << "OpenGL error after drawing butterfly " << i << ": " << err << std::endl;
+                }
+            }
+        }
         
-        // Draw scene objects first
-        ourShader->use();
-        ourShader->setMat4("projection", projection);
-        ourShader->setMat4("view", view);
-        
-        // Draw the triangle
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
-        glBindVertexArray(0);
-        
-        // Draw the butterfly
-        butterfly.Draw(view, projection);
-        
-        // Draw skybox last (with depth test set to GL_LEQUAL)
-        glDepthFunc(GL_LEQUAL);  // Change depth function so depth test passes when values are equal to depth buffer's content
+        // Draw skybox with depth testing but depth writing disabled
+        glDepthMask(GL_FALSE);  // Disable writing to depth buffer
         skyboxShader->use();
         
         // Remove translation from the view matrix for the skybox
@@ -252,11 +312,14 @@ int main()
         skyboxShader->setMat4("view", skyboxView);
         skyboxShader->setMat4("projection", projection);
         
-        // Draw skybox
+        // Draw skybox (only once)
         skybox.Draw(skyboxView, projection);
         
-        // Reset depth function to default
-        glDepthFunc(GL_LESS);
+        // Restore depth writing
+        glDepthMask(GL_TRUE);
+        
+        // Make sure to use the main shader for other objects
+        ourShader->use();
         
         // Swap buffers and poll IO events
         glfwSwapBuffers(window);

@@ -1,4 +1,5 @@
 /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles/tinygltf.dir
+/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles/glad.dir
 /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles/GraphicsProject.dir
 /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles/edit_cache.dir
 /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles/rebuild_cache.dir

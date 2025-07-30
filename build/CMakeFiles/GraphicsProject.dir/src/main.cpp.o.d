@@ -1163,4 +1163,7 @@ CMakeFiles/GraphicsProject.dir/src/main.cpp.o: \
   /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/shader_fwd.h \
   /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/shader_manager.h \
   /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/skybox.h \
-  /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/butterfly.h
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/butterfly.h \
+  /Users/namangupta/CascadeProjects/graphics-project-work-2025/src/text_renderer.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/map \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tree

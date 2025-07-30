@@ -18,11 +18,17 @@ else()
     )
 endif()
 
-# Add GLFW
+# Add GLFW and GLAD
 add_subdirectory(external/glfw)
+
+# Add GLAD source files
+set(GLAD_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/external/glad-3.3/src/gl.c
+)
 
 # Find required packages
 find_package(OpenGL REQUIRED)
+find_package(Freetype REQUIRED)
 
 # Enable C++11 for tinygltf
 set(CMAKE_CXX_STANDARD 11)  # tinygltf requires C++11
@@ -40,6 +46,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/external/tinygltf
     ${CMAKE_CURRENT_SOURCE_DIR}/external/stb
     ${CMAKE_CURRENT_SOURCE_DIR}/external/tinygltf/tiny_gltf.h
+    ${FREETYPE_INCLUDE_DIRS}
 )
 
 # Add tinygltf source files (kept for potential future use)
@@ -54,20 +61,32 @@ target_include_directories(tinygltf PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/external/stb
 )
 
-# Add executable
-add_executable(${PROJECT_NAME}
+# Add source files
+set(SOURCE_FILES
     src/main.cpp
-    src/skybox.cpp
     src/shader_manager.cpp
+    src/skybox.cpp
     src/butterfly.cpp
     src/obj_loader.cpp
-    external/glad-3.3/src/gl.c
+    src/text_renderer.cpp
+)
+
+# Add GLAD as a library
+add_library(glad STATIC ${GLAD_SOURCES})
+target_include_directories(glad PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/external/glad-3.3/include)
+
+# Add the executable
+add_executable(${PROJECT_NAME} 
+    ${SOURCE_FILES}
+    ${TINYGLTF_SOURCES}
 )
 
 # Link libraries
 target_link_libraries(${PROJECT_NAME}
-    ${OPENGL_LIBRARIES}
     glfw
+    glad
+    ${OPENGL_gl_LIBRARY}
+    ${FREETYPE_LIBRARIES}
     ${CMAKE_DL_LIBS}
     m
     tinygltf

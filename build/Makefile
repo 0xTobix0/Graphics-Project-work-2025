@@ -175,6 +175,19 @@ tinygltf/fast:
 .PHONY : tinygltf/fast
 
 #=============================================================================
+# Target rules for targets named glad
+
+# Build rule for target.
+glad: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad
+.PHONY : glad
+
+# fast build rule for target.
+glad/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
+.PHONY : glad/fast
+
+#=============================================================================
 # Target rules for targets named GraphicsProject
 
 # Build rule for target.
@@ -608,7 +621,7 @@ external/glad-3.3/src/gl.o: external/glad-3.3/src/gl.c.o
 
 # target to build an object file
 external/glad-3.3/src/gl.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/external/glad-3.3/src/gl.c.o
 .PHONY : external/glad-3.3/src/gl.c.o
 
 external/glad-3.3/src/gl.i: external/glad-3.3/src/gl.c.i
@@ -616,7 +629,7 @@ external/glad-3.3/src/gl.i: external/glad-3.3/src/gl.c.i
 
 # target to preprocess a source file
 external/glad-3.3/src/gl.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/external/glad-3.3/src/gl.c.i
 .PHONY : external/glad-3.3/src/gl.c.i
 
 external/glad-3.3/src/gl.s: external/glad-3.3/src/gl.c.s
@@ -624,7 +637,7 @@ external/glad-3.3/src/gl.s: external/glad-3.3/src/gl.c.s
 
 # target to generate assembly for a file
 external/glad-3.3/src/gl.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/glad-3.3/src/gl.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/external/glad-3.3/src/gl.c.s
 .PHONY : external/glad-3.3/src/gl.c.s
 
 external/tinygltf/tiny_gltf.o: external/tinygltf/tiny_gltf.cc.o
@@ -633,6 +646,7 @@ external/tinygltf/tiny_gltf.o: external/tinygltf/tiny_gltf.cc.o
 # target to build an object file
 external/tinygltf/tiny_gltf.cc.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/external/tinygltf/tiny_gltf.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/tinygltf/tiny_gltf.cc.o
 .PHONY : external/tinygltf/tiny_gltf.cc.o
 
 external/tinygltf/tiny_gltf.i: external/tinygltf/tiny_gltf.cc.i
@@ -641,6 +655,7 @@ external/tinygltf/tiny_gltf.i: external/tinygltf/tiny_gltf.cc.i
 # target to preprocess a source file
 external/tinygltf/tiny_gltf.cc.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/external/tinygltf/tiny_gltf.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/tinygltf/tiny_gltf.cc.i
 .PHONY : external/tinygltf/tiny_gltf.cc.i
 
 external/tinygltf/tiny_gltf.s: external/tinygltf/tiny_gltf.cc.s
@@ -649,6 +664,7 @@ external/tinygltf/tiny_gltf.s: external/tinygltf/tiny_gltf.cc.s
 # target to generate assembly for a file
 external/tinygltf/tiny_gltf.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/external/tinygltf/tiny_gltf.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/tinygltf/tiny_gltf.cc.s
 .PHONY : external/tinygltf/tiny_gltf.cc.s
 
 src/butterfly.o: src/butterfly.cpp.o
@@ -771,6 +787,30 @@ src/skybox.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/skybox.cpp.s
 .PHONY : src/skybox.cpp.s
 
+src/text_renderer.o: src/text_renderer.cpp.o
+.PHONY : src/text_renderer.o
+
+# target to build an object file
+src/text_renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/text_renderer.cpp.o
+.PHONY : src/text_renderer.cpp.o
+
+src/text_renderer.i: src/text_renderer.cpp.i
+.PHONY : src/text_renderer.i
+
+# target to preprocess a source file
+src/text_renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/text_renderer.cpp.i
+.PHONY : src/text_renderer.cpp.i
+
+src/text_renderer.s: src/text_renderer.cpp.s
+.PHONY : src/text_renderer.s
+
+# target to generate assembly for a file
+src/text_renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/text_renderer.cpp.s
+.PHONY : src/text_renderer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -793,6 +833,7 @@ help:
 	@echo "... events"
 	@echo "... gamma"
 	@echo "... gears"
+	@echo "... glad"
 	@echo "... glfw"
 	@echo "... glfwinfo"
 	@echo "... heightmap"
@@ -838,6 +879,9 @@ help:
 	@echo "... src/skybox.o"
 	@echo "... src/skybox.i"
 	@echo "... src/skybox.s"
+	@echo "... src/text_renderer.o"
+	@echo "... src/text_renderer.i"
+	@echo "... src/text_renderer.s"
 .PHONY : help
 
 

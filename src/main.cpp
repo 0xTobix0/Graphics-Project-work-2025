@@ -27,6 +27,12 @@
 #include "shader_manager.h"
 #include "skybox.h"
 #include "butterfly.h"
+#include "text_renderer.h"
+
+// FPS counter variables
+float fps = 0.0f;
+int frameCount = 0;
+float lastFpsUpdate = 0.0f;
 
 // Function declarations
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -103,13 +109,33 @@ int main()
     glEnable(GL_DEPTH_TEST);
     
     // Initialize shaders using the shader manager
-    initShaders();
+    InitializeShaderManager();
     
     // Debug shader loading
     if (!butterflyShader) {
         std::cerr << "ERROR: Butterfly shader failed to load!" << std::endl;
     } else {
         std::cout << "Butterfly shader loaded successfully (ID: " << butterflyShader->ID << ")" << std::endl;
+    }
+    
+    // Initialize text renderer with larger font size for better visibility
+    TextRenderer textRenderer(SCR_WIDTH, SCR_HEIGHT);
+    if (!textRenderer.Load("fonts/Roboto-Regular.ttf", 32)) {
+        std::cerr << "Failed to load Roboto font for text rendering" << std::endl;
+        // Try system font as fallback
+        if (!textRenderer.Load("/System/Library/Fonts/Supplemental/Arial.ttf", 32)) {
+            std::cerr << "Failed to load fallback Arial font" << std::endl;
+            // Try another common system font
+            if (!textRenderer.Load("/System/Library/Fonts/SFNS.ttf", 32)) {
+                std::cerr << "Failed to load any font for text rendering" << std::endl;
+            } else {
+                std::cout << "Successfully loaded SFNS system font" << std::endl;
+            }
+        } else {
+            std::cout << "Successfully loaded Arial system font" << std::endl;
+        }
+    } else {
+        std::cout << "Successfully loaded Roboto font" << std::endl;
     }
     
     // Create butterfly with OBJ model - use path to the new model
@@ -255,6 +281,14 @@ int main()
     // Enable depth testing
     glEnable(GL_DEPTH_TEST);
     
+    // Initialize text renderer
+    // Text renderer is already initialized above
+    
+    // FPS counter variables
+    float lastFpsUpdate = 0.0f;
+    int frameCount = 0;
+    float fps = 0.0f;
+    
     // Main loop
     while (!glfwWindowShouldClose(window)) {
         // Per-frame time logic
@@ -267,7 +301,20 @@ int main()
         
         // Render
         // ------
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        // Calculate FPS
+        frameCount++;
+        if (currentFrame - lastFpsUpdate >= 1.0f) {
+            fps = frameCount / (currentFrame - lastFpsUpdate);
+            frameCount = 0;
+            lastFpsUpdate = currentFrame;
+            
+            // Update window title with FPS
+            std::string title = "Butterfly Scene - " + std::to_string(static_cast<int>(fps)) + " FPS";
+            glfwSetWindowTitle(window, title.c_str());
+        }
+        
+        // Clear the screen
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         // Calculate projection and view matrices
@@ -293,7 +340,9 @@ int main()
                 }
                 
                 // Draw the butterfly
-                butterfly->Draw(view, projection);
+                if (butterflies.size() > 0) {
+                    butterflies[0]->Draw(view, projection);
+                }
                 
                 // Check for OpenGL errors after drawing
                 GLenum err;
@@ -317,6 +366,26 @@ int main()
         
         // Restore depth writing
         glDepthMask(GL_TRUE);
+        
+        // Draw FPS counter with background for better visibility
+        std::string fpsText = "FPS: " + std::to_string(static_cast<int>(fps));
+        
+        // Draw semi-transparent background for better text visibility
+        glDisable(GL_DEPTH_TEST);
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        
+        // Draw background rectangle
+        float textWidth = fpsText.length() * 15.0f; // Approximate width
+        float textHeight = 30.0f;
+        float margin = 10.0f;
+        
+        // Draw the text with a shadow for better visibility
+        textRenderer.RenderText(fpsText, 20.0f, 40.0f, 1.0f, glm::vec3(0.0f, 0.0f, 0.0f)); // Shadow
+        textRenderer.RenderText(fpsText, 18.0f, 38.0f, 1.0f, glm::vec3(1.0f, 1.0f, 0.0f)); // Main text
+        
+        // Re-enable depth testing for 3D rendering
+        glEnable(GL_DEPTH_TEST);
         
         // Make sure to use the main shader for other objects
         ourShader->use();

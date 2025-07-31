@@ -13,9 +13,9 @@ struct Material {
     vec3 diffuse;
     vec3 specular;
     float shininess;
-    bool useDiffuseMap;
-    bool useSpecularMap;
-    bool useNormalMap;
+    bool hasDiffuseMap;
+    bool hasSpecularMap;
+    bool hasNormalMap;
 };
 
 uniform Material material;
@@ -48,15 +48,12 @@ void main()
     //     worldPos = rotation * worldPos;
     // }
     
-    // Transform normal to world space
+    // Transform normal to world space using normal matrix
     Normal = normalize(normalMatrix * aNormal);
     
     // Pass data to fragment shader
     FragPos = vec3(worldPos);
     TexCoords = aTexCoords;
-    
-    // Pass vertex position to fragment shader for discarding fragments
-    FragPos = vec3(worldPos);
     
     // Final position
     gl_Position = projection * view * worldPos;

@@ -11,9 +11,9 @@ struct Material {
     vec3 diffuse;
     vec3 specular;
     float shininess;
-    bool useDiffuseMap;
-    bool useSpecularMap;
-    bool useNormalMap;
+    bool hasDiffuseMap;
+    bool hasSpecularMap;
+    bool hasNormalMap;
 };
 
 // Light properties
@@ -42,10 +42,10 @@ void main()
     }
     
     // Sample texture maps if available
-    vec3 texDiffuse = material.useDiffuseMap ? 
+    vec3 texDiffuse = material.hasDiffuseMap ? 
         texture(diffuseMap, TexCoords).rgb : material.diffuse;
     
-    vec3 texSpecular = material.useSpecularMap ? 
+    vec3 texSpecular = material.hasSpecularMap ? 
         texture(specularMap, TexCoords).rgb : material.specular;
     
     // Ambient lighting
@@ -66,9 +66,16 @@ void main()
     // Combine lighting components
     vec3 result = ambient + diffuse + specular;
     
+    // Ensure we don't have negative values
+    result = max(result, vec3(0.0));
+    
     // Apply gamma correction
     float gamma = 2.2;
     result = pow(result, vec3(1.0/gamma));
     
+    // Output final color
     FragColor = vec4(result, 1.0);
+    
+    // Debug: Uncomment to visualize normals
+    // FragColor = vec4(normalize(Normal) * 0.5 + 0.5, 1.0);
 }

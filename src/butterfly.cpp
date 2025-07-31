@@ -119,14 +119,24 @@ void Butterfly::Draw(const glm::mat4& view, const glm::mat4& projection) {
     shader.setMat4("view", view);
     shader.setMat4("projection", projection);
     
-    // Update light position to follow the camera (or set a fixed position)
-    glm::vec3 lightPos = viewPos + glm::vec3(5.0f, 5.0f, 5.0f);
+    // Set light position to be above and slightly in front of the camera
+    glm::vec3 lightPos = viewPos + glm::vec3(2.0f, 3.0f, 2.0f);
     shader.setVec3("light.position", lightPos);
     
-    // Set light properties (make sure these match your shader)
-    shader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
-    shader.setVec3("light.diffuse", 0.8f, 0.8f, 0.8f);
-    shader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+    // Enhanced light properties for better visibility
+    shader.setVec3("light.ambient", 0.3f, 0.3f, 0.3f);  // Increased ambient
+    shader.setVec3("light.diffuse", 1.0f, 1.0f, 1.0f);  // Brighter diffuse
+    shader.setVec3("light.specular", 1.0f, 1.0f, 1.0f); // Keep specular bright
+    
+    // Set material properties (in case they're not set in the model)
+    shader.setVec3("material.ambient", 1.0f, 1.0f, 1.0f);
+    shader.setVec3("material.diffuse", 0.8f, 0.8f, 0.8f);
+    shader.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
+    shader.setFloat("material.shininess", 32.0f);
+    
+    // Debug output (uncomment if needed)
+    // std::cout << "Light position: (" << lightPos.x << ", " << lightPos.y << ", " << lightPos.z << ")" << std::endl;
+    // std::cout << "View position: (" << viewPos.x << ", " << viewPos.y << ", " << viewPos.z << ")" << std::endl;
     
     // Calculate wing angles for animation (reduced amplitude for debugging)
     float leftWingAngle = 0.2f * sin(wingAngle);

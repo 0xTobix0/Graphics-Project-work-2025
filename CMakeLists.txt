@@ -94,18 +94,29 @@ target_link_libraries(${PROJECT_NAME}
 
 # Copy shaders to build directory
 file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/shaders)
-file(GLOB SHADER_FILES 
-    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/*.vert" 
-    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/*.frag"
-    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/butterfly.*"
+
+# List of shader files to copy
+set(SHADER_FILES
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/butterfly.vert"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/butterfly.frag"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/skybox.vert"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/skybox.frag"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/text.vert"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/text.frag"
 )
+
+# Copy each shader file to the build directory
 foreach(SHADER ${SHADER_FILES})
-    add_custom_command(
-        TARGET ${PROJECT_NAME} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy ${SHADER} ${CMAKE_BINARY_DIR}/shaders/
-        DEPENDS ${SHADER}
-        COMMENT "Copying shader: ${SHADER}"
-    )
+    if(EXISTS ${SHADER})
+        add_custom_command(
+            TARGET ${PROJECT_NAME} POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy ${SHADER} ${CMAKE_BINARY_DIR}/shaders/
+            DEPENDS ${SHADER}
+            COMMENT "Copying shader: ${SHADER}"
+        )
+    else()
+        message(WARNING "Shader file not found: ${SHADER}")
+    endif()
 endforeach()
 
 # Copy skybox cubemap textures to build directory

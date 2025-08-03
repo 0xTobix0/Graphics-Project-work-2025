@@ -118,15 +118,28 @@ void Box::initCube() {
     LOG_DEBUG("Cube initialization complete");
 }
 
-void Box::drawCube(Shader& shader, const glm::mat4& model, const glm::vec3& color) {
+void Box::drawCube(Shader& shader, const glm::mat4& model, const glm::vec3& color, float rotation) {
+    // Create a rotation matrix
+    glm::mat4 rotationMatrix = glm::rotate(glm::mat4(1.0f), rotation, glm::vec3(0.5f, 1.0f, 0.3f));
+    
+    // Combine rotation with the model matrix
+    glm::mat4 finalModel = model * rotationMatrix;
+    
     // Set the model matrix and color
-    shader.setMat4("model", model);
+    shader.setMat4("model", finalModel);
     shader.setVec3("instanceColor", color);
     
     // Draw the cube
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
+}
+
+// Update all instances
+void Box::updateInstances(float deltaTime) {
+    for (auto& instance : instances) {
+        instance.update(deltaTime);
+    }
 }
 
 // Draw all instances using modern OpenGL
@@ -160,17 +173,8 @@ void Box::drawInstances(Shader& shader, const glm::mat4& view, const glm::mat4& 
         model = glm::translate(model, instance.position);
         model = glm::scale(model, glm::vec3(instance.scale));
         
-        // Draw the cube with this instance's transform and color
-        LOG_DEBUG("Drawing cube at (" << instance.position.x << ", " 
-                  << instance.position.y << ", " << instance.position.z 
-                  << ") with scale " << instance.scale);
-                  
-        shader.setMat4("model", model);
-        shader.setVec3("instanceColor", instance.color);
-        
-        glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
-        glBindVertexArray(0);
+        // Draw the cube with rotation
+        drawCube(shader, model, instance.color, instance.rotation);
     }
     
     // Check for OpenGL errors
@@ -182,7 +186,7 @@ void Box::drawInstances(Shader& shader, const glm::mat4& view, const glm::mat4& 
     }
     
     if (!hasError) {
-        LOG_DEBUG("Successfully drew box at origin with yellow color");
+        LOG_DEBUG("Successfully drew all boxes");
     }
     
     LOG_DEBUG("=== Finished drawInstances ===\n");

@@ -332,33 +332,27 @@ int main()
         butterflies[i]->SetScale(0.005f);
     }
     
-    // For timing
+    // For timing and FPS
     float lastFrame = 0.0f;
-    
-    // Enable depth testing
-    glEnable(GL_DEPTH_TEST);
-    
-    // Initialize text renderer
-    // Text renderer is already initialized above
-    
-    // FPS counter variables
+    float deltaTime = 0.0f;
     float lastFpsUpdate = 0.0f;
     int frameCount = 0;
     float fps = 0.0f;
     
-    // Main loop
+    // Enable depth testing
+    glEnable(GL_DEPTH_TEST);
+    
+    // Main render loop
     while (!glfwWindowShouldClose(window)) {
         // Per-frame time logic
         float currentFrame = static_cast<float>(glfwGetTime());
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
         
-        // Input
+        // Input - use delta time for smooth movement
         processInput(window);
         
-        // Render
-        // ------
-        // Calculate FPS
+        // FPS calculation
         frameCount++;
         if (currentFrame - lastFpsUpdate >= 1.0f) {
             fps = frameCount / (currentFrame - lastFpsUpdate);
@@ -374,53 +368,21 @@ int main()
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
-        // Calculate projection and view matrices
-        glm::mat4 projection = glm::perspective(glm::radians(fov), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+        // Calculate view and projection matrices
+        glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         glm::mat4 view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
         
-        // Draw the box
-        if (boxShader.ID != 0) {
-            // Enable depth testing for 3D objects
-            glEnable(GL_DEPTH_TEST);
-            
-            // Draw the box
-            Box::drawInstances(boxShader, view, projection, static_cast<float>(glfwGetTime()));
-            
-            // Check for OpenGL errors after drawing box
-            GLenum err;
-            while ((err = glGetError()) != GL_NO_ERROR) {
-                std::cerr << "OpenGL error after drawing box: " << err << std::endl;
-            }
-        }
+        // Update all boxes
+        Box::updateInstances(deltaTime);
         
-        // Update and draw butterflies
-        glEnable(GL_DEPTH_TEST);
-        for (size_t i = 0; i < butterflies.size(); ++i) {
-            auto& butterfly = butterflies[i];
+        // Draw all boxes
+        Box::drawInstances(boxShader, view, projection, static_cast<float>(glfwGetTime()));
+        
+        // Draw butterflies
+        for (auto& butterfly : butterflies) {
             if (butterfly) {
-                // Update butterfly state
                 butterfly->Update(deltaTime);
-                
-                // Get position for debugging
-                glm::vec3 pos = butterfly->GetPosition();
-                
-                // Only print position occasionally to reduce console spam
-                static int frameCount = 0;
-                if (frameCount++ % 60 == 0) {  // Print every 60 frames
-                    std::cout << "Drawing butterfly " << i << " at (" 
-                              << pos.x << ", " << pos.y << ", " << pos.z << ")" << std::endl;
-                }
-                
-                // Draw the butterfly
-                if (butterflies.size() > 0) {
-                    butterflies[0]->Draw(view, projection);
-                }
-                
-                // Check for OpenGL errors after drawing
-                GLenum err;
-                while ((err = glGetError()) != GL_NO_ERROR) {
-                    std::cerr << "OpenGL error after drawing butterfly " << i << ": " << err << std::endl;
-                }
+                butterfly->Draw(view, projection);
             }
         }
         

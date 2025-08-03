@@ -69,6 +69,7 @@ set(SOURCE_FILES
     src/butterfly.cpp
     src/obj_loader.cpp
     src/text_renderer.cpp
+    src/box.cpp
 )
 
 # Add GLAD as a library
@@ -103,6 +104,8 @@ set(SHADER_FILES
     "${CMAKE_CURRENT_SOURCE_DIR}/shaders/skybox.frag"
     "${CMAKE_CURRENT_SOURCE_DIR}/shaders/text.vert"
     "${CMAKE_CURRENT_SOURCE_DIR}/shaders/text.frag"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/box.vert"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shaders/box.frag"
 )
 
 # Copy each shader file to the build directory

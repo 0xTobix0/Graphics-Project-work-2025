@@ -28,6 +28,7 @@
 #include "skybox.h"
 #include "butterfly.h"
 #include "text_renderer.h"
+#include "box.h"
 
 // FPS counter variables
 float fps = 0.0f;
@@ -117,6 +118,62 @@ int main()
     } else {
         std::cout << "Butterfly shader loaded successfully (ID: " << butterflyShader->ID << ")" << std::endl;
     }
+    
+    // Initialize Box class
+    Box::setupBuffers();
+    
+    // Add multiple small boxes with random positions and colors
+    std::srand(static_cast<unsigned int>(std::time(nullptr))); // Seed random number generator
+    
+    // Function to generate a random float between min and max
+    auto randomFloat = [](float min, float max) {
+        return min + static_cast<float>(std::rand()) / (static_cast<float>(RAND_MAX/(max - min)));
+    };
+    
+    // Function to generate a random color
+    auto randomColor = [&randomFloat]() {
+        return glm::vec3(
+            randomFloat(0.2f, 1.0f), // R
+            randomFloat(0.2f, 1.0f), // G
+            randomFloat(0.2f, 1.0f)  // B
+        );
+    };
+    
+    // Create a grid of boxes
+    const int gridSize = 5; // 5x5x5 grid
+    const float spacing = 2.0f;
+    
+    for (int x = -gridSize/2; x <= gridSize/2; ++x) {
+        for (int y = -gridSize/2; y <= gridSize/2; ++y) {
+            for (int z = -gridSize/2; z <= gridSize/2; ++z) {
+                // Skip the center where the butterfly is
+                if (x == 0 && y == 0 && z == 0) continue;
+                
+                // Add some randomness to the positions
+                float randX = x * spacing + randomFloat(-0.5f, 0.5f);
+                float randY = y * spacing + randomFloat(-0.5f, 0.5f);
+                float randZ = z * spacing + randomFloat(-0.5f, 0.5f);
+                
+                // Add the box
+                Box::addInstance(Box::InstanceData{
+                    glm::vec3(randX, randY + 0.5f, randZ - 3.0f), // Position with some offset
+                    randomColor(),                                 // Random color
+                    randomFloat(0.01f, 0.05f)                     // Random scale between 0.01 and 0.05
+                });
+            }
+        }
+    }
+    
+    // Add one special box above the butterfly
+    Box::addInstance(Box::InstanceData{
+        glm::vec3(0.0f, 1.5f, -3.0f),  // Position above the butterfly
+        glm::vec3(1.0f, 1.0f, 1.0f),   // White color
+        0.1f                          // Slightly larger scale
+    });
+    
+    // Create a shader for the box
+    Shader boxShader("shaders/box.vert", "shaders/box.frag");
+    std::cout << "Box shader loaded successfully (ID: " << boxShader.ID << ")" << std::endl;
     
     // Initialize text renderer with larger font size for better visibility
     TextRenderer textRenderer(SCR_WIDTH, SCR_HEIGHT);
@@ -320,6 +377,21 @@ int main()
         // Calculate projection and view matrices
         glm::mat4 projection = glm::perspective(glm::radians(fov), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         glm::mat4 view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+        
+        // Draw the box
+        if (boxShader.ID != 0) {
+            // Enable depth testing for 3D objects
+            glEnable(GL_DEPTH_TEST);
+            
+            // Draw the box
+            Box::drawInstances(boxShader, view, projection, static_cast<float>(glfwGetTime()));
+            
+            // Check for OpenGL errors after drawing box
+            GLenum err;
+            while ((err = glGetError()) != GL_NO_ERROR) {
+                std::cerr << "OpenGL error after drawing box: " << err << std::endl;
+            }
+        }
         
         // Update and draw butterflies
         glEnable(GL_DEPTH_TEST);

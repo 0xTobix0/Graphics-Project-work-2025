@@ -18,9 +18,10 @@ public:
         float scale;
         float rotation;
         float rotationSpeed;
+        bool isLightSource;  // Whether this box is a light source
         
-        InstanceData(const glm::vec3& pos, const glm::vec3& col, float scl)
-            : position(pos), color(col), scale(scl), rotation(0.0f) {
+        InstanceData(const glm::vec3& pos, const glm::vec3& col, float scl, bool isLight = false)
+            : position(pos), color(col), scale(scl), rotation(0.0f), isLightSource(isLight) {
             // Random velocity
             velocity = glm::vec3(
                 (rand() % 100 - 50) * 0.001f,  // -0.05 to 0.05
@@ -32,7 +33,12 @@ public:
         }
         
         void update(float deltaTime) {
-            // Update position
+            // Skip update for light sources to keep them fixed
+            if (isLightSource) {
+                return;
+            }
+            
+            // Update position for non-light boxes
             position += velocity * deltaTime * 60.0f; // Scale by delta time and a speed factor
             
             // Update rotation

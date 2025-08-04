@@ -332,6 +332,39 @@ int main()
         butterflies[i]->SetScale(0.005f);
     }
     
+    // Add a stationary light source box at the top of the scene
+    {
+        Box::InstanceData lightBox(
+            glm::vec3(0.0f, 10.0f, 0.0f),  // Position at the top of the scene
+            glm::vec3(1.0f, 0.9f, 0.5f),   // Yellowish-white color for light
+            0.5f,                          // Smaller scale for the light source
+            true                           // Mark as a light source
+        );
+        Box::addInstance(lightBox);
+        std::cout << "Added light source at position: (0.0, 10.0, 0.0)" << std::endl;
+    }
+    
+    // Add a few boxes to be illuminated by the light
+    std::srand(static_cast<unsigned int>(glfwGetTime())); // Seed random number generator
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            // Generate random color (avoiding very dark colors for better visibility)
+            glm::vec3 randomColor(
+                0.2f + static_cast<float>(std::rand()) / (static_cast<float>(RAND_MAX / 0.8f)),
+                0.2f + static_cast<float>(std::rand()) / (static_cast<float>(RAND_MAX / 0.8f)),
+                0.2f + static_cast<float>(std::rand()) / (static_cast<float>(RAND_MAX / 0.8f))
+            );
+            
+            Box::InstanceData box(
+                glm::vec3((i-1) * 2.0f, 0.5f, (j-1) * 2.0f - 5.0f),  // Grid of boxes
+                randomColor,  // Random color
+                0.2f + (i + j) * 0.1f,      // Smaller and more uniform scale
+                false                         // Not a light source
+            );
+            Box::addInstance(box);
+        }
+    }
+    
     // For timing and FPS
     float lastFrame = 0.0f;
     float deltaTime = 0.0f;

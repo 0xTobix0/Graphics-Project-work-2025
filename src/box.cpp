@@ -14,18 +14,39 @@ GLuint Box::VAO = 0;
 GLuint Box::VBO = 0;
 GLuint Box::EBO = 0;
 
-// Simple cube vertices (positions only, 8 vertices instead of 24)
+// Cube vertices with positions and normals (interleaved)
 const float cubeVertices[] = {
+    // Positions          // Normals
     // Front face
-    -0.5f, -0.5f,  0.5f,  // 0
-     0.5f, -0.5f,  0.5f,  // 1
-     0.5f,  0.5f,  0.5f,  // 2
-    -0.5f,  0.5f,  0.5f,  // 3
+    -0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  // 0
+     0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  // 1
+     0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  // 2
+    -0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  // 3
     // Back face
-    -0.5f, -0.5f, -0.5f,  // 4
-     0.5f, -0.5f, -0.5f,  // 5
-     0.5f,  0.5f, -0.5f,  // 6
-    -0.5f,  0.5f, -0.5f   // 7
+    -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  // 4
+     0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  // 5
+     0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  // 6
+    -0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  // 7
+    // Left face
+    -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,  // 8 (same as 4)
+    -0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,  // 9 (same as 0)
+    -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,  // 10 (same as 3)
+    -0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,  // 11 (same as 7)
+    // Right face
+     0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,  // 12 (same as 1)
+     0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,  // 13 (same as 5)
+     0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,  // 14 (same as 6)
+     0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,  // 15 (same as 2)
+    // Bottom face
+    -0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,  // 16 (same as 4)
+     0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,  // 17 (same as 5)
+     0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,  // 18 (same as 1)
+    -0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,  // 19 (same as 0)
+    // Top face
+    -0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  // 20 (same as 3)
+     0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  // 21 (same as 2)
+     0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  // 22 (same as 6)
+    -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f   // 23 (same as 7)
 };
 
 // Indices for the cube (6 faces, 2 triangles per face, 3 vertices per triangle)
@@ -102,9 +123,13 @@ void Box::initCube() {
     LOG_DEBUG("Created EBO with " << sizeof(cubeIndices) << " bytes of index data (" << (sizeof(cubeIndices)/sizeof(unsigned int)) << " indices)");
     
     // Set the vertex attribute pointers
-    // Position attribute (3 floats)
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    // Position attribute
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
+    
+    // Normal attribute
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
     
     // Check for OpenGL errors
     GLenum err;
@@ -144,50 +169,86 @@ void Box::updateInstances(float deltaTime) {
 
 // Draw all instances using modern OpenGL
 void Box::drawInstances(Shader& shader, const glm::mat4& view, const glm::mat4& projection, float time) {
-    LOG_DEBUG("=== Starting drawInstances ===");
-    
     if (instances.empty()) {
-        LOG_DEBUG("No box instances to draw!");
         return;
     }
     
-    // Make sure buffers are initialized
-    if (!buffersInitialized) {
-        LOG_DEBUG("Buffers not initialized, calling setupBuffers");
-        setupBuffers();
-    }
+    // Make sure buffers are set up
+    setupBuffers();
     
-    // Set up the shader
-    LOG_DEBUG("Setting up shader");
+    // Use the shader
     shader.use();
+    
+    // Set up view and projection matrices
     shader.setMat4("view", view);
     shader.setMat4("projection", projection);
     
-    // Enable depth testing
-    glEnable(GL_DEPTH_TEST);
+    // Set view position (camera position) for lighting calculations
+    glm::vec3 viewPos = glm::vec3(glm::inverse(view)[3]);
+    shader.setVec3("viewPos", viewPos);
     
-    // Draw all instances
+    // Find the light source (if any)
+    glm::vec3 lightPos(0.0f, 10.0f, 0.0f); // Default light position (above the scene)
+    bool hasLightSource = false;
+    
+    // First pass: find the light source
     for (const auto& instance : instances) {
-        // Create model matrix with position and scale
+        if (instance.isLightSource) {
+            lightPos = instance.position;
+            hasLightSource = true;
+            break;
+        }
+    }
+    
+    // Bind the VAO
+    glBindVertexArray(VAO);
+    
+    // Draw each instance
+    for (const auto& instance : instances) {
+        // Skip light source in the first pass
+        if (instance.isLightSource) {
+            continue;
+        }
+        
+        // Create model matrix for this instance
         glm::mat4 model = glm::mat4(1.0f);
         model = glm::translate(model, instance.position);
         model = glm::scale(model, glm::vec3(instance.scale));
+        model = glm::rotate(model, instance.rotation, glm::vec3(0.0f, 1.0f, 0.0f));
         
-        // Draw the cube with rotation
-        drawCube(shader, model, instance.color, instance.rotation);
+        // Set the model matrix and color
+        shader.setMat4("model", model);
+        shader.setVec3("instanceColor", instance.color);
+        shader.setBool("isLightSource", false);
+        shader.setVec3("lightPos", lightPos);
+        
+        // Draw the cube
+        glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
     }
     
-    // Check for OpenGL errors
-    GLenum err;
-    bool hasError = false;
-    while ((err = glGetError()) != GL_NO_ERROR) {
-        LOG_DEBUG("OpenGL error in drawInstances: " << err);
-        hasError = true;
+    // Second pass: draw light sources
+    if (hasLightSource) {
+        // Use a different shader or set a flag for light sources
+        for (const auto& instance : instances) {
+            if (!instance.isLightSource) {
+                continue;
+            }
+            
+            // Create model matrix for the light source
+            glm::mat4 model = glm::mat4(1.0f);
+            model = glm::translate(model, instance.position);
+            model = glm::scale(model, glm::vec3(instance.scale));
+            
+            // Set the model matrix and color
+            shader.setMat4("model", model);
+            shader.setVec3("instanceColor", instance.color);
+            shader.setBool("isLightSource", true);
+            
+            // Draw the light source
+            glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
+        }
     }
     
-    if (!hasError) {
-        LOG_DEBUG("Successfully drew all boxes");
-    }
-    
-    LOG_DEBUG("=== Finished drawInstances ===\n");
+    // Unbind VAO
+    glBindVertexArray(0);
 }

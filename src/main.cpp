@@ -37,7 +37,7 @@ float lastFpsUpdate = 0.0f;
 
 // Function declarations
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window);
+void processInput(GLFWwindow* window, float deltaTime);
 void mouse_callback(GLFWwindow* window, double xposIn, double yposIn);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
@@ -383,7 +383,7 @@ int main()
         lastFrame = currentFrame;
         
         // Input - use delta time for smooth movement
-        processInput(window);
+        processInput(window, deltaTime);
         
         // FPS calculation
         frameCount++;
@@ -476,19 +476,37 @@ int main()
 }
 
 // Process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
-void processInput(GLFWwindow* window) {
+void processInput(GLFWwindow* window, float deltaTime) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
 
     float cameraSpeed = 2.5f * deltaTime;
+    
+    // Move forward/backward
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
         cameraPos += cameraSpeed * cameraFront;
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
         cameraPos -= cameraSpeed * cameraFront;
+        
+    // Strafe left/right
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
         cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+        
+    // Move up/down
+    if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
+        cameraPos -= cameraUp * cameraSpeed;
+    if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
+        cameraPos += cameraUp * cameraSpeed;
+        
+    // Debug output for camera position
+    static float lastPrintTime = 0.0f;
+    float currentTime = static_cast<float>(glfwGetTime());
+    if (currentTime - lastPrintTime > 1.0f) {
+        std::cout << "Camera position: (" << cameraPos.x << ", " << cameraPos.y << ", " << cameraPos.z << ")" << std::endl;
+        lastPrintTime = currentTime;
+    }
 }
 
 // GLFW: whenever the window size changed (by OS or user resize) this callback function executes

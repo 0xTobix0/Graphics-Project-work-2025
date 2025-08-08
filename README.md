@@ -8,45 +8,45 @@ This is a computer graphics project implementing an infinite scene with advanced
 - C++17 or later
 - OpenGL 3.3
 - GLFW3
-- GLEW
 
-## Building the Project
+## Build Instructions
 
 1. Clone the repository:
 ```bash
-git clone git@github.com:0xTobix0/Graphics-Project-work-2025.git
+git clone https://github.com/0xTobix0/Graphics-Project-work-2025.git
+cd Graphics-Project-work-2025
 ```
 
-2. Create a build directory and compile:
+2. Build the project:
 ```bash
-cd Graphics-Project-work-2025
-mkdir build
+mkdir -p build
 cd build
 cmake ..
-make
+make -j$(nproc)
 ```
 
-3. Run the executable:
+3. Run the application:
 ```bash
 ./GraphicsProject
 ```
 
 ## Controls
-- WASD: Move camera forward/backward/left/right
-- ESC: Exit application
-- Mouse: Look around
+- **WASD**: Move camera
+- **Mouse**: Look around
+- **Q/E**: Move up/down
+- **ESC**: Exit
 
-## Features
-- Infinite scene with controllable camera
-- Shader-based OpenGL 3.3 rendering
-- Basic geometry rendering
-- Texture mapping
-- Lighting and shadows
-- Animation system
-- Advanced graphics feature (TBD)
+## Technical Details
+- **OpenGL Version**: 3.3 Core Profile
+- **Shaders**: GLSL 330
+- **Libraries**: GLFW, GLAD, GLM, stb_image
+- **Advanced Feature**: Instanced rendering for particles
 
-## Development Status
-This project is actively being developed. Check the progress screenshots in the documentation for current state.
+## Project Structure
+- `src/`: C++ source files
+- `shaders/`: GLSL shader files
+- `textures/`: Texture assets
+- `external/`: Third-party dependencies
 
 ## License
-This project is for academic purposes only.
+Academic use only. See LICENSE for details.

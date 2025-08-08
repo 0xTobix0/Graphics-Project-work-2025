@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GraphicsProject.dir/external/tinygltf/tiny_gltf.cc.o"
   "CMakeFiles/GraphicsProject.dir/external/tinygltf/tiny_gltf.cc.o.d"
+  "CMakeFiles/GraphicsProject.dir/src/box.cpp.o"
+  "CMakeFiles/GraphicsProject.dir/src/box.cpp.o.d"
   "CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o"
   "CMakeFiles/GraphicsProject.dir/src/butterfly.cpp.o.d"
   "CMakeFiles/GraphicsProject.dir/src/main.cpp.o"

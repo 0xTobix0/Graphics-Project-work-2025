@@ -667,6 +667,30 @@ external/tinygltf/tiny_gltf.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/external/tinygltf/tiny_gltf.cc.s
 .PHONY : external/tinygltf/tiny_gltf.cc.s
 
+src/box.o: src/box.cpp.o
+.PHONY : src/box.o
+
+# target to build an object file
+src/box.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/box.cpp.o
+.PHONY : src/box.cpp.o
+
+src/box.i: src/box.cpp.i
+.PHONY : src/box.i
+
+# target to preprocess a source file
+src/box.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/box.cpp.i
+.PHONY : src/box.cpp.i
+
+src/box.s: src/box.cpp.s
+.PHONY : src/box.s
+
+# target to generate assembly for a file
+src/box.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/src/box.cpp.s
+.PHONY : src/box.cpp.s
+
 src/butterfly.o: src/butterfly.cpp.o
 .PHONY : src/butterfly.o
 
@@ -864,6 +888,9 @@ help:
 	@echo "... external/tinygltf/tiny_gltf.o"
 	@echo "... external/tinygltf/tiny_gltf.i"
 	@echo "... external/tinygltf/tiny_gltf.s"
+	@echo "... src/box.o"
+	@echo "... src/box.i"
+	@echo "... src/box.s"
 	@echo "... src/butterfly.o"
 	@echo "... src/butterfly.i"
 	@echo "... src/butterfly.s"

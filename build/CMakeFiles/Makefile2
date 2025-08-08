@@ -293,12 +293,12 @@ CMakeFiles/tinygltf.dir/clean:
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=25,26 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=26 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/glad.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/glad.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : CMakeFiles/glad.dir/rule
@@ -310,7 +310,7 @@ glad: CMakeFiles/glad.dir/rule
 # codegen rule for target.
 CMakeFiles/glad.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=25,26 "Finished codegen for target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=26 "Finished codegen for target glad"
 .PHONY : CMakeFiles/glad.dir/codegen
 
 # clean rule for target.
@@ -322,9 +322,9 @@ CMakeFiles/glad.dir/clean:
 # Target rules for target CMakeFiles/GraphicsProject.dir
 
 # All Build rule for target.
+CMakeFiles/GraphicsProject.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 CMakeFiles/GraphicsProject.dir/all: CMakeFiles/tinygltf.dir/all
 CMakeFiles/GraphicsProject.dir/all: CMakeFiles/glad.dir/all
-CMakeFiles/GraphicsProject.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphicsProject.dir/build.make CMakeFiles/GraphicsProject.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target GraphicsProject"
@@ -423,12 +423,12 @@ external/glfw/src/CMakeFiles/update_mappings.dir/clean:
 external/glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35,36,37,38 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35,36,37,38,39 "Built target glfw"
 .PHONY : external/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/src/CMakeFiles/glfw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/src/CMakeFiles/glfw.dir/rule
@@ -440,7 +440,7 @@ glfw: external/glfw/src/CMakeFiles/glfw.dir/rule
 # codegen rule for target.
 external/glfw/src/CMakeFiles/glfw.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35,36,37,38 "Finished codegen for target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35,36,37,38,39 "Finished codegen for target glfw"
 .PHONY : external/glfw/src/CMakeFiles/glfw.dir/codegen
 
 # clean rule for target.
@@ -455,12 +455,12 @@ external/glfw/src/CMakeFiles/glfw.dir/clean:
 external/glfw/examples/CMakeFiles/boing.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/boing.dir/build.make external/glfw/examples/CMakeFiles/boing.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/boing.dir/build.make external/glfw/examples/CMakeFiles/boing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=7,8 "Built target boing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=7,8,9 "Built target boing"
 .PHONY : external/glfw/examples/CMakeFiles/boing.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/boing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/boing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/boing.dir/rule
@@ -472,7 +472,7 @@ boing: external/glfw/examples/CMakeFiles/boing.dir/rule
 # codegen rule for target.
 external/glfw/examples/CMakeFiles/boing.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/boing.dir/build.make external/glfw/examples/CMakeFiles/boing.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=7,8 "Finished codegen for target boing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=7,8,9 "Finished codegen for target boing"
 .PHONY : external/glfw/examples/CMakeFiles/boing.dir/codegen
 
 # clean rule for target.
@@ -487,12 +487,12 @@ external/glfw/examples/CMakeFiles/boing.dir/clean:
 external/glfw/examples/CMakeFiles/gears.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/gears.dir/build.make external/glfw/examples/CMakeFiles/gears.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/gears.dir/build.make external/glfw/examples/CMakeFiles/gears.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=23,24 "Built target gears"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=24,25 "Built target gears"
 .PHONY : external/glfw/examples/CMakeFiles/gears.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/gears.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/gears.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/gears.dir/rule
@@ -504,7 +504,7 @@ gears: external/glfw/examples/CMakeFiles/gears.dir/rule
 # codegen rule for target.
 external/glfw/examples/CMakeFiles/gears.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/gears.dir/build.make external/glfw/examples/CMakeFiles/gears.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=23,24 "Finished codegen for target gears"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=24,25 "Finished codegen for target gears"
 .PHONY : external/glfw/examples/CMakeFiles/gears.dir/codegen
 
 # clean rule for target.
@@ -519,12 +519,12 @@ external/glfw/examples/CMakeFiles/gears.dir/clean:
 external/glfw/examples/CMakeFiles/heightmap.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/heightmap.dir/build.make external/glfw/examples/CMakeFiles/heightmap.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/heightmap.dir/build.make external/glfw/examples/CMakeFiles/heightmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=43,44 "Built target heightmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=44,45 "Built target heightmap"
 .PHONY : external/glfw/examples/CMakeFiles/heightmap.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/heightmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/heightmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/heightmap.dir/rule
@@ -536,7 +536,7 @@ heightmap: external/glfw/examples/CMakeFiles/heightmap.dir/rule
 # codegen rule for target.
 external/glfw/examples/CMakeFiles/heightmap.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/heightmap.dir/build.make external/glfw/examples/CMakeFiles/heightmap.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=43,44 "Finished codegen for target heightmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=44,45 "Finished codegen for target heightmap"
 .PHONY : external/glfw/examples/CMakeFiles/heightmap.dir/codegen
 
 # clean rule for target.
@@ -556,7 +556,7 @@ external/glfw/examples/CMakeFiles/offscreen.dir/all: external/glfw/src/CMakeFile
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/offscreen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/offscreen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/offscreen.dir/rule
@@ -588,7 +588,7 @@ external/glfw/examples/CMakeFiles/particles.dir/all: external/glfw/src/CMakeFile
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/particles.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/particles.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/particles.dir/rule
@@ -615,7 +615,7 @@ external/glfw/examples/CMakeFiles/particles.dir/clean:
 external/glfw/examples/CMakeFiles/sharing.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/sharing.dir/build.make external/glfw/examples/CMakeFiles/sharing.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/sharing.dir/build.make external/glfw/examples/CMakeFiles/sharing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=73,74,75 "Built target sharing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=74,75 "Built target sharing"
 .PHONY : external/glfw/examples/CMakeFiles/sharing.dir/all
 
 # Build rule for subdir invocation for target.
@@ -632,7 +632,7 @@ sharing: external/glfw/examples/CMakeFiles/sharing.dir/rule
 # codegen rule for target.
 external/glfw/examples/CMakeFiles/sharing.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/sharing.dir/build.make external/glfw/examples/CMakeFiles/sharing.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=73,74,75 "Finished codegen for target sharing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=74,75 "Finished codegen for target sharing"
 .PHONY : external/glfw/examples/CMakeFiles/sharing.dir/codegen
 
 # clean rule for target.
@@ -652,7 +652,7 @@ external/glfw/examples/CMakeFiles/simple.dir/all: external/glfw/src/CMakeFiles/g
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/simple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/simple.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/simple.dir/rule
@@ -679,12 +679,12 @@ external/glfw/examples/CMakeFiles/simple.dir/clean:
 external/glfw/examples/CMakeFiles/splitview.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/splitview.dir/build.make external/glfw/examples/CMakeFiles/splitview.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/splitview.dir/build.make external/glfw/examples/CMakeFiles/splitview.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=78,79 "Built target splitview"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=78,79,80 "Built target splitview"
 .PHONY : external/glfw/examples/CMakeFiles/splitview.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/splitview.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/splitview.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/splitview.dir/rule
@@ -696,7 +696,7 @@ splitview: external/glfw/examples/CMakeFiles/splitview.dir/rule
 # codegen rule for target.
 external/glfw/examples/CMakeFiles/splitview.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/splitview.dir/build.make external/glfw/examples/CMakeFiles/splitview.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=78,79 "Finished codegen for target splitview"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=78,79,80 "Finished codegen for target splitview"
 .PHONY : external/glfw/examples/CMakeFiles/splitview.dir/codegen
 
 # clean rule for target.
@@ -716,7 +716,7 @@ external/glfw/examples/CMakeFiles/wave.dir/all: external/glfw/src/CMakeFiles/glf
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/wave.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/wave.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/wave.dir/rule
@@ -743,12 +743,12 @@ external/glfw/examples/CMakeFiles/wave.dir/clean:
 external/glfw/tests/CMakeFiles/clipboard.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/clipboard.dir/build.make external/glfw/tests/CMakeFiles/clipboard.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/clipboard.dir/build.make external/glfw/tests/CMakeFiles/clipboard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=9,10,11 "Built target clipboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=10,11,12 "Built target clipboard"
 .PHONY : external/glfw/tests/CMakeFiles/clipboard.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/clipboard.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/clipboard.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/clipboard.dir/rule
@@ -760,7 +760,7 @@ clipboard: external/glfw/tests/CMakeFiles/clipboard.dir/rule
 # codegen rule for target.
 external/glfw/tests/CMakeFiles/clipboard.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/clipboard.dir/build.make external/glfw/tests/CMakeFiles/clipboard.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=9,10,11 "Finished codegen for target clipboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=10,11,12 "Finished codegen for target clipboard"
 .PHONY : external/glfw/tests/CMakeFiles/clipboard.dir/codegen
 
 # clean rule for target.
@@ -780,7 +780,7 @@ external/glfw/tests/CMakeFiles/events.dir/all: external/glfw/src/CMakeFiles/glfw
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/events.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/events.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/events.dir/rule
@@ -807,7 +807,7 @@ external/glfw/tests/CMakeFiles/events.dir/clean:
 external/glfw/tests/CMakeFiles/msaa.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/msaa.dir/build.make external/glfw/tests/CMakeFiles/msaa.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/msaa.dir/build.make external/glfw/tests/CMakeFiles/msaa.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=59,60,61,62 "Built target msaa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=60,61,62 "Built target msaa"
 .PHONY : external/glfw/tests/CMakeFiles/msaa.dir/all
 
 # Build rule for subdir invocation for target.
@@ -824,7 +824,7 @@ msaa: external/glfw/tests/CMakeFiles/msaa.dir/rule
 # codegen rule for target.
 external/glfw/tests/CMakeFiles/msaa.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/msaa.dir/build.make external/glfw/tests/CMakeFiles/msaa.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=59,60,61,62 "Finished codegen for target msaa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=60,61,62 "Finished codegen for target msaa"
 .PHONY : external/glfw/tests/CMakeFiles/msaa.dir/codegen
 
 # clean rule for target.
@@ -839,12 +839,12 @@ external/glfw/tests/CMakeFiles/msaa.dir/clean:
 external/glfw/tests/CMakeFiles/glfwinfo.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=39,40,41,42 "Built target glfwinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=40,41,42,43 "Built target glfwinfo"
 .PHONY : external/glfw/tests/CMakeFiles/glfwinfo.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/glfwinfo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/glfwinfo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/glfwinfo.dir/rule
@@ -856,7 +856,7 @@ glfwinfo: external/glfw/tests/CMakeFiles/glfwinfo.dir/rule
 # codegen rule for target.
 external/glfw/tests/CMakeFiles/glfwinfo.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=39,40,41,42 "Finished codegen for target glfwinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=40,41,42,43 "Finished codegen for target glfwinfo"
 .PHONY : external/glfw/tests/CMakeFiles/glfwinfo.dir/codegen
 
 # clean rule for target.
@@ -876,7 +876,7 @@ external/glfw/tests/CMakeFiles/iconify.dir/all: external/glfw/src/CMakeFiles/glf
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/iconify.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/iconify.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/iconify.dir/rule
@@ -903,12 +903,12 @@ external/glfw/tests/CMakeFiles/iconify.dir/clean:
 external/glfw/tests/CMakeFiles/monitors.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=56,57,58 "Built target monitors"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=57,58,59 "Built target monitors"
 .PHONY : external/glfw/tests/CMakeFiles/monitors.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/monitors.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/monitors.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/monitors.dir/rule
@@ -920,7 +920,7 @@ monitors: external/glfw/tests/CMakeFiles/monitors.dir/rule
 # codegen rule for target.
 external/glfw/tests/CMakeFiles/monitors.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=56,57,58 "Finished codegen for target monitors"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=57,58,59 "Finished codegen for target monitors"
 .PHONY : external/glfw/tests/CMakeFiles/monitors.dir/codegen
 
 # clean rule for target.
@@ -935,12 +935,12 @@ external/glfw/tests/CMakeFiles/monitors.dir/clean:
 external/glfw/tests/CMakeFiles/reopen.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/reopen.dir/build.make external/glfw/tests/CMakeFiles/reopen.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/reopen.dir/build.make external/glfw/tests/CMakeFiles/reopen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=71,72 "Built target reopen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=71,72,73 "Built target reopen"
 .PHONY : external/glfw/tests/CMakeFiles/reopen.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/reopen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/reopen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/reopen.dir/rule
@@ -952,7 +952,7 @@ reopen: external/glfw/tests/CMakeFiles/reopen.dir/rule
 # codegen rule for target.
 external/glfw/tests/CMakeFiles/reopen.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/reopen.dir/build.make external/glfw/tests/CMakeFiles/reopen.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=71,72 "Finished codegen for target reopen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=71,72,73 "Finished codegen for target reopen"
 .PHONY : external/glfw/tests/CMakeFiles/reopen.dir/codegen
 
 # clean rule for target.
@@ -967,12 +967,12 @@ external/glfw/tests/CMakeFiles/reopen.dir/clean:
 external/glfw/tests/CMakeFiles/cursor.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/cursor.dir/build.make external/glfw/tests/CMakeFiles/cursor.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/cursor.dir/build.make external/glfw/tests/CMakeFiles/cursor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=12,13 "Built target cursor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=13,14 "Built target cursor"
 .PHONY : external/glfw/tests/CMakeFiles/cursor.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/cursor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/cursor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/cursor.dir/rule
@@ -984,7 +984,7 @@ cursor: external/glfw/tests/CMakeFiles/cursor.dir/rule
 # codegen rule for target.
 external/glfw/tests/CMakeFiles/cursor.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/cursor.dir/build.make external/glfw/tests/CMakeFiles/cursor.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=12,13 "Finished codegen for target cursor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=13,14 "Finished codegen for target cursor"
 .PHONY : external/glfw/tests/CMakeFiles/cursor.dir/codegen
 
 # clean rule for target.
@@ -999,7 +999,7 @@ external/glfw/tests/CMakeFiles/cursor.dir/clean:
 external/glfw/tests/CMakeFiles/empty.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/empty.dir/build.make external/glfw/tests/CMakeFiles/empty.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/empty.dir/build.make external/glfw/tests/CMakeFiles/empty.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=14,15,16,17 "Built target empty"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=15,16,17 "Built target empty"
 .PHONY : external/glfw/tests/CMakeFiles/empty.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1016,7 +1016,7 @@ empty: external/glfw/tests/CMakeFiles/empty.dir/rule
 # codegen rule for target.
 external/glfw/tests/CMakeFiles/empty.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/empty.dir/build.make external/glfw/tests/CMakeFiles/empty.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=14,15,16,17 "Finished codegen for target empty"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=15,16,17 "Finished codegen for target empty"
 .PHONY : external/glfw/tests/CMakeFiles/empty.dir/codegen
 
 # clean rule for target.
@@ -1031,12 +1031,12 @@ external/glfw/tests/CMakeFiles/empty.dir/clean:
 external/glfw/tests/CMakeFiles/gamma.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/gamma.dir/build.make external/glfw/tests/CMakeFiles/gamma.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/gamma.dir/build.make external/glfw/tests/CMakeFiles/gamma.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=21,22 "Built target gamma"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=21,22,23 "Built target gamma"
 .PHONY : external/glfw/tests/CMakeFiles/gamma.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/gamma.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/gamma.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/gamma.dir/rule
@@ -1048,7 +1048,7 @@ gamma: external/glfw/tests/CMakeFiles/gamma.dir/rule
 # codegen rule for target.
 external/glfw/tests/CMakeFiles/gamma.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/gamma.dir/build.make external/glfw/tests/CMakeFiles/gamma.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=21,22 "Finished codegen for target gamma"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=21,22,23 "Finished codegen for target gamma"
 .PHONY : external/glfw/tests/CMakeFiles/gamma.dir/codegen
 
 # clean rule for target.
@@ -1063,7 +1063,7 @@ external/glfw/tests/CMakeFiles/gamma.dir/clean:
 external/glfw/tests/CMakeFiles/icon.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/icon.dir/build.make external/glfw/tests/CMakeFiles/icon.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/icon.dir/build.make external/glfw/tests/CMakeFiles/icon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=45,46,47 "Built target icon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=46,47 "Built target icon"
 .PHONY : external/glfw/tests/CMakeFiles/icon.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1080,7 +1080,7 @@ icon: external/glfw/tests/CMakeFiles/icon.dir/rule
 # codegen rule for target.
 external/glfw/tests/CMakeFiles/icon.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/icon.dir/build.make external/glfw/tests/CMakeFiles/icon.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=45,46,47 "Finished codegen for target icon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=46,47 "Finished codegen for target icon"
 .PHONY : external/glfw/tests/CMakeFiles/icon.dir/codegen
 
 # clean rule for target.
@@ -1100,7 +1100,7 @@ external/glfw/tests/CMakeFiles/inputlag.dir/all: external/glfw/src/CMakeFiles/gl
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/inputlag.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/inputlag.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/inputlag.dir/rule
@@ -1127,12 +1127,12 @@ external/glfw/tests/CMakeFiles/inputlag.dir/clean:
 external/glfw/tests/CMakeFiles/joysticks.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/joysticks.dir/build.make external/glfw/tests/CMakeFiles/joysticks.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/joysticks.dir/build.make external/glfw/tests/CMakeFiles/joysticks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=54,55 "Built target joysticks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=54,55,56 "Built target joysticks"
 .PHONY : external/glfw/tests/CMakeFiles/joysticks.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/joysticks.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/joysticks.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/joysticks.dir/rule
@@ -1144,7 +1144,7 @@ joysticks: external/glfw/tests/CMakeFiles/joysticks.dir/rule
 # codegen rule for target.
 external/glfw/tests/CMakeFiles/joysticks.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/joysticks.dir/build.make external/glfw/tests/CMakeFiles/joysticks.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=54,55 "Finished codegen for target joysticks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=54,55,56 "Finished codegen for target joysticks"
 .PHONY : external/glfw/tests/CMakeFiles/joysticks.dir/codegen
 
 # clean rule for target.
@@ -1164,7 +1164,7 @@ external/glfw/tests/CMakeFiles/opacity.dir/all: external/glfw/src/CMakeFiles/glf
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/opacity.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/opacity.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/opacity.dir/rule
@@ -1191,7 +1191,7 @@ external/glfw/tests/CMakeFiles/opacity.dir/clean:
 external/glfw/tests/CMakeFiles/tearing.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/tearing.dir/build.make external/glfw/tests/CMakeFiles/tearing.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/tearing.dir/build.make external/glfw/tests/CMakeFiles/tearing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=80,81,82 "Built target tearing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=81,82 "Built target tearing"
 .PHONY : external/glfw/tests/CMakeFiles/tearing.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1208,7 +1208,7 @@ tearing: external/glfw/tests/CMakeFiles/tearing.dir/rule
 # codegen rule for target.
 external/glfw/tests/CMakeFiles/tearing.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/tearing.dir/build.make external/glfw/tests/CMakeFiles/tearing.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=80,81,82 "Finished codegen for target tearing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles --progress-num=81,82 "Finished codegen for target tearing"
 .PHONY : external/glfw/tests/CMakeFiles/tearing.dir/codegen
 
 # clean rule for target.
@@ -1228,7 +1228,7 @@ external/glfw/tests/CMakeFiles/threads.dir/all: external/glfw/src/CMakeFiles/glf
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/threads.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/threads.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/threads.dir/rule
@@ -1260,7 +1260,7 @@ external/glfw/tests/CMakeFiles/timeout.dir/all: external/glfw/src/CMakeFiles/glf
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/timeout.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/timeout.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/timeout.dir/rule
@@ -1292,7 +1292,7 @@ external/glfw/tests/CMakeFiles/title.dir/all: external/glfw/src/CMakeFiles/glfw.
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/title.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/title.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/title.dir/rule
@@ -1324,7 +1324,7 @@ external/glfw/tests/CMakeFiles/triangle-vulkan.dir/all: external/glfw/src/CMakeF
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/triangle-vulkan.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/triangle-vulkan.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/triangle-vulkan.dir/rule
@@ -1356,7 +1356,7 @@ external/glfw/tests/CMakeFiles/windows.dir/all: external/glfw/src/CMakeFiles/glf
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/windows.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/windows.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/namangupta/CascadeProjects/graphics-project-work-2025/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/windows.dir/rule
